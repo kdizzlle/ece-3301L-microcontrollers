@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>lab6_pb1.0</name>
+            <name>lab6_pb1</name>
+            <name>lab6_pa</name>
+            <name>lab5_p1</name>
+            <name>lab2_p1</name>
+            <creation-uuid>6a362806-998f-451d-a454-1be98d1e43ee</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <sourceRootList/>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions/>
+            <asminc-extensions/>
+            <make-dep-projects/>
+        </data>
+    </configuration>
+</project>

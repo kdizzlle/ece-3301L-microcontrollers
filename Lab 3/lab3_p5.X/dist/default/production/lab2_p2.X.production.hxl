@@ -1,0 +1,29 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  4h - FFD5h
+  10000h - 2FFFFFh
+  300004h - 300005h
+  300008h - 30003Fh
+  
+ dist/default/production\lab2_p2.X.production.hex ranges:
+  0h - 3h
+  FFD6h - FFFFh
+  300000h - 300003h
+  300006h - 300007h
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = dist/default/production\lab2_p2.X.production.hex
+00000000: 1111------------------------------------------------------------
+0000FFC0: ----------------------111111111111111111111111111111111111111111
+00300000: 1111--11--------------------------------------------------------
