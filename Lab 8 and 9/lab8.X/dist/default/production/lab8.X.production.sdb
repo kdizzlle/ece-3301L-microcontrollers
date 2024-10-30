@@ -1,0 +1,1045 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+[d frameptr 4065 ]
+"6 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\ST7735_TFT.c
+[e E3583 _BOOL `uc
+FALSE 0
+TRUE 1
+]
+"8 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"63 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+"4 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"73 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\uopen.c
+[v _OpenUSART OpenUSART `(v  1 e 0 0 ]
+"43 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\lab8.c
+[v _main main `(v  1 e 0 0 ]
+"108
+[v _Day_Mode Day_Mode `(v  1 e 0 0 ]
+"113
+[v _Night_Mode Night_Mode `(v  1 e 0 0 ]
+"48 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\Main_Screen.c
+[v _Initialize_LCD_Screen Initialize_LCD_Screen `(v  1 e 0 0 ]
+"206
+[v _update_LCD_misc update_LCD_misc `(v  1 e 0 0 ]
+"242
+[v _Draw_Star Draw_Star `(v  1 e 0 0 ]
+"248
+[v _Erase_Star Erase_Star `(v  1 e 0 0 ]
+"11 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\ST7735_TFT.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+"136
+[v _spiwrite spiwrite `(v  1 e 0 0 ]
+"145
+[v _write_command write_command `(v  1 e 0 0 ]
+"156
+[v _write_data write_data `(v  1 e 0 0 ]
+"164
+[v _LCD_Reset LCD_Reset `(v  1 e 0 0 ]
+"228
+[v _Rcmd1 Rcmd1 `(v  1 e 0 0 ]
+"275
+[v _Rcmd2red Rcmd2red `(v  1 e 0 0 ]
+"289
+[v _Rcmd3 Rcmd3 `(v  1 e 0 0 ]
+"343
+[v _setAddrWindow setAddrWindow `(v  1 e 0 0 ]
+"358
+[v _drawPixel drawPixel `(v  1 e 0 0 ]
+"367
+[v _drawFastVLine drawFastVLine `(v  1 e 0 0 ]
+"388
+[v _fillRect fillRect `(v  1 e 0 0 ]
+"398
+[v _drawChar drawChar `(v  1 e 0 0 ]
+"425
+[v _drawtext drawtext `(v  1 e 0 0 ]
+"443
+[v _Rcmd2green Rcmd2green `(v  1 e 0 0 ]
+"454
+[v _fillRectangle fillRectangle `(v  1 e 0 0 ]
+"479
+[v _drawCircle drawCircle `(v  1 e 0 0 ]
+"540
+[v _fillCircleHelper fillCircleHelper `(v  1 e 0 0 ]
+"565
+[v _fillCircle fillCircle `(v  1 e 0 0 ]
+"570
+[v _fillScreen fillScreen `(v  1 e 0 0 ]
+"575
+[v _drawFastHLine drawFastHLine `(v  1 e 0 0 ]
+"595
+[v _TFT_GreenTab_Initialize TFT_GreenTab_Initialize `(v  1 e 0 0 ]
+"636
+[v _drawRect drawRect `(v  1 e 0 0 ]
+"18 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\utils.c
+[v _Init_ADC Init_ADC `(v  1 e 0 0 ]
+"25
+[v _Init_UART Init_UART `(v  1 e 0 0 ]
+"60
+[v _Activate_Buzzer Activate_Buzzer `(v  1 e 0 0 ]
+"83
+[v _Deactivate_Buzzer Deactivate_Buzzer `(v  1 e 0 0 ]
+"89
+[v _Wait_One_Second Wait_One_Second `(v  1 e 0 0 ]
+"114
+[v _Wait_Half_Second Wait_Half_Second `(v  1 e 0 0 ]
+"141
+[v _Read_Volt Read_Volt `(f  1 e 3 0 ]
+"149
+[v _get_full_ADC get_full_ADC `(ui  1 e 2 0 ]
+[s S140 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"98 D:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[s S149 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+]
+[s S153 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SS 1 0 :1:5 
+]
+[s S156 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS 1 0 :1:5 
+]
+[s S159 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 nSS 1 0 :1:5 
+]
+[s S162 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S165 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S168 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S171 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S173 . 1 `S140 1 . 1 0 `S149 1 . 1 0 `S153 1 . 1 0 `S156 1 . 1 0 `S159 1 . 1 0 `S162 1 . 1 0 `S165 1 . 1 0 `S168 1 . 1 0 `S171 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES173  1 e 1 @3968 ]
+[s S849 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"405
+[s S858 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 SCK 1 0 :1:3 
+`uc 1 SDI 1 0 :1:4 
+`uc 1 SDO 1 0 :1:5 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S867 . 1 `uc 1 T13CKI 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 SCL 1 0 :1:3 
+`uc 1 SDA 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S876 . 1 `uc 1 T1CKI 1 0 :1:0 
+]
+[s S878 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S881 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S884 . 1 `S849 1 . 1 0 `S858 1 . 1 0 `S867 1 . 1 0 `S876 1 . 1 0 `S878 1 . 1 0 `S881 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES884  1 e 1 @3970 ]
+[s S568 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"571
+[s S577 . 1 `uc 1 PSP0 1 0 :1:0 
+`uc 1 PSP1 1 0 :1:1 
+`uc 1 PSP2 1 0 :1:2 
+`uc 1 PSP3 1 0 :1:3 
+`uc 1 PSP4 1 0 :1:4 
+`uc 1 PSP5 1 0 :1:5 
+`uc 1 PSP6 1 0 :1:6 
+`uc 1 PSP7 1 0 :1:7 
+]
+[s S586 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 P1B 1 0 :1:5 
+`uc 1 P1C 1 0 :1:6 
+`uc 1 P1D 1 0 :1:7 
+]
+[s S591 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S594 . 1 `S568 1 . 1 0 `S577 1 . 1 0 `S586 1 . 1 0 `S591 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES594  1 e 1 @3971 ]
+"1633
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"1854
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"2075
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S1431 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"2107
+[u S1449 . 1 `S1431 1 . 1 0 `S849 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES1449  1 e 1 @3988 ]
+"2296
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"2517
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S1394 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"2769
+[s S1403 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IE 1 0 :1:5 
+]
+[s S1406 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+]
+[u S1409 . 1 `S1394 1 . 1 0 `S1403 1 . 1 0 `S1406 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES1409  1 e 1 @3997 ]
+[s S372 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"2848
+[s S381 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[s S384 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+]
+[u S387 . 1 `S372 1 . 1 0 `S381 1 . 1 0 `S384 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES387  1 e 1 @3998 ]
+[s S284 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 HLVDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CMIF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"3067
+[s S293 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIF 1 0 :1:2 
+]
+[u S296 . 1 `S284 1 . 1 0 `S293 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES296  1 e 1 @4001 ]
+"3265
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+[s S1320 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3306
+[s S1329 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S1332 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S1335 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S1338 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S1341 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S1343 . 1 `S1320 1 . 1 0 `S1329 1 . 1 0 `S1332 1 . 1 0 `S1335 1 . 1 0 `S1338 1 . 1 0 `S1341 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES1343  1 e 1 @4011 ]
+"3474
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+[s S1233 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3534
+[s S1242 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S1245 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S1248 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SENDB1 1 0 :1:3 
+]
+[s S1251 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S1254 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S1257 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S1260 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S1262 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[s S1265 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S1268 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S1270 . 1 `S1233 1 . 1 0 `S1242 1 . 1 0 `S1245 1 . 1 0 `S1248 1 . 1 0 `S1251 1 . 1 0 `S1254 1 . 1 0 `S1257 1 . 1 0 `S1260 1 . 1 0 `S1262 1 . 1 0 `S1265 1 . 1 0 `S1268 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES1270  1 e 1 @4012 ]
+"3771
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"3793
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"3804
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
+"3810
+[v _T3CON T3CON `VEuc  1 e 1 @4017 ]
+[s S312 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T3SYNC 1 0 :1:2 
+]
+"3849
+[s S315 . 1 `uc 1 TMR3ON 1 0 :1:0 
+`uc 1 TMR3CS 1 0 :1:1 
+`uc 1 nT3SYNC 1 0 :1:2 
+`uc 1 T3CCP1 1 0 :1:3 
+`uc 1 T3CKPS 1 0 :2:4 
+`uc 1 T3CCP2 1 0 :1:6 
+`uc 1 RD16 1 0 :1:7 
+]
+[s S323 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T3SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T3CKPS0 1 0 :1:4 
+`uc 1 T3CKPS1 1 0 :1:5 
+]
+[s S329 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RD163 1 0 :1:7 
+]
+[s S332 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN3 1 0 :1:3 
+]
+[s S335 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T3RD16 1 0 :1:7 
+]
+[u S338 . 1 `S312 1 . 1 0 `S315 1 . 1 0 `S323 1 . 1 0 `S329 1 . 1 0 `S332 1 . 1 0 `S335 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES338  1 e 1 @4017 ]
+"3929
+[v _TMR3L TMR3L `VEuc  1 e 1 @4018 ]
+"3935
+[v _TMR3H TMR3H `VEuc  1 e 1 @4019 ]
+"4435
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
+"4519
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
+"4645
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"4715
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"4805
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S1087 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"4853
+[s S1090 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S1097 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S1104 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S1107 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S1110 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S1113 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[s S1116 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S1119 . 1 `S1087 1 . 1 0 `S1090 1 . 1 0 `S1087 1 . 1 0 `S1097 1 . 1 0 `S1104 1 . 1 0 `S1107 1 . 1 0 `S1110 1 . 1 0 `S1113 1 . 1 0 `S1116 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1119  1 e 1 @4034 ]
+"4933
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"4939
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"5006
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+"5075
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S408 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"5170
+[s S411 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S414 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S429 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S434 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 A 1 0 :1:5 
+]
+[s S439 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S444 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S449 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S452 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S455 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S460 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA 1 0 :1:5 
+]
+[s S463 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+]
+[s S466 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START 1 0 :1:3 
+]
+[s S469 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP 1 0 :1:4 
+]
+[s S472 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S475 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S478 . 1 `S408 1 . 1 0 `S411 1 . 1 0 `S414 1 . 1 0 `S408 1 . 1 0 `S411 1 . 1 0 `S429 1 . 1 0 `S434 1 . 1 0 `S439 1 . 1 0 `S444 1 . 1 0 `S449 1 . 1 0 `S452 1 . 1 0 `S455 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 `S469 1 . 1 0 `S472 1 . 1 0 `S475 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES478  1 e 1 @4039 ]
+"5320
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"5326
+[v _T2CON T2CON `VEuc  1 e 1 @4042 ]
+"5396
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"6061
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"6137
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+[s S1056 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"6159
+[s S1063 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 T016BIT 1 0 :1:6 
+]
+[u S1069 . 1 `S1056 1 . 1 0 `S1063 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1069  1 e 1 @4053 ]
+"6219
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"6225
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S969 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"6682
+[s S978 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S987 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[s S996 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S1005 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S1009 . 1 `S969 1 . 1 0 `S978 1 . 1 0 `S987 1 . 1 0 `S996 1 . 1 0 `S1005 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1009  1 e 1 @4082 ]
+"8088
+[v _TRMT TRMT `VEb  1 e 0 @32097 ]
+"37 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\lab8.c
+[v _MODE MODE `uc  1 e 1 0 ]
+"39
+[v _volt volt `f  1 e 3 0 ]
+"15 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\Main_Screen.c
+[v _buffer buffer `[31]uc  1 e 31 0 ]
+"17
+[v _txt txt `*.39uc  1 e 2 0 ]
+"19
+[v _EW_Count EW_Count `[3]uc  1 e 3 0 ]
+"20
+[v _EWLT_Count EWLT_Count `[3]uc  1 e 3 0 ]
+"21
+[v _NS_Count NS_Count `[3]uc  1 e 3 0 ]
+"22
+[v _NSLT_Count NSLT_Count `[3]uc  1 e 3 0 ]
+"24
+[v _PED_EW_Count PED_EW_Count `[3]uc  1 e 3 0 ]
+"25
+[v _PED_NS_Count PED_NS_Count `[3]uc  1 e 3 0 ]
+"27
+[v _SW_EWPED_Txt SW_EWPED_Txt `[2]uc  1 e 2 0 ]
+"28
+[v _SW_EWLT_Txt SW_EWLT_Txt `[2]uc  1 e 2 0 ]
+"29
+[v _SW_NSPED_Txt SW_NSPED_Txt `[2]uc  1 e 2 0 ]
+"30
+[v _SW_NSLT_Txt SW_NSLT_Txt `[2]uc  1 e 2 0 ]
+"32
+[v _Light_Sensor_Voltage_Txt Light_Sensor_Voltage_Txt `[5]uc  1 e 5 0 ]
+"33
+[v _Light_Sensor_Mode_Txt Light_Sensor_Mode_Txt `[3]uc  1 e 3 0 ]
+"35
+[v _Act_Mode_Txt Act_Mode_Txt `[2]uc  1 e 2 0 ]
+"36
+[v _FlashingS_Txt FlashingS_Txt `[2]uc  1 e 2 0 ]
+"37
+[v _FlashingR_Txt FlashingR_Txt `[2]uc  1 e 2 0 ]
+"39
+[v _Timing_Txt Timing_Txt `[22]uc  1 e 22 0 ]
+"41
+[v _SW_EWPED SW_EWPED `uc  1 e 1 0 ]
+"42
+[v _SW_EWLT SW_EWLT `uc  1 e 1 0 ]
+"43
+[v _SW_NSPED SW_NSPED `uc  1 e 1 0 ]
+"44
+[v _SW_NSLT SW_NSLT `uc  1 e 1 0 ]
+"45
+[v _Light_Sensor Light_Sensor `uc  1 e 1 0 ]
+"6 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\ST7735_TFT.c
+[v _wrap wrap `E3583  1 e 1 0 ]
+"8
+[v _colstart colstart `uc  1 e 1 0 ]
+[v _rowstart rowstart `uc  1 e 1 0 ]
+[v __tft_type _tft_type `uc  1 e 1 0 ]
+"33
+[v _font font `C[255]uc  1 e 255 0 ]
+"88
+[v _font2 font2 `C[220]uc  1 e 220 0 ]
+"43 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\lab8.c
+[v _main main `(v  1 e 0 0 ]
+{
+"80
+} 0
+"4 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"141 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\utils.c
+[v _Read_Volt Read_Volt `(f  1 e 3 0 ]
+{
+[v Read_Volt@ADC_Channel ADC_Channel `uc  1 a 1 wreg ]
+"145
+[v Read_Volt@volt volt `f  1 a 3 30 ]
+"144
+[v Read_Volt@nStep nStep `i  1 a 2 33 ]
+"141
+[v Read_Volt@ADC_Channel ADC_Channel `uc  1 a 1 wreg ]
+"143
+[v Read_Volt@ADC_Channel ADC_Channel `uc  1 a 1 35 ]
+"147
+} 0
+"149
+[v _get_full_ADC get_full_ADC `(ui  1 e 2 0 ]
+{
+"151
+[v get_full_ADC@result result `ui  1 a 2 4 ]
+"157
+} 0
+"54 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 22 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 26 ]
+[v ___ftdiv@exp exp `uc  1 a 1 25 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 21 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 12 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 15 ]
+"86
+} 0
+"32 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 11 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"113 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\lab8.c
+[v _Night_Mode Night_Mode `(v  1 e 0 0 ]
+{
+"116
+} 0
+"48 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\Main_Screen.c
+[v _Initialize_LCD_Screen Initialize_LCD_Screen `(v  1 e 0 0 ]
+{
+"154
+} 0
+"8 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+{
+"15
+[v strcpy@cp cp `*.39uc  1 a 2 4 ]
+"8
+[v strcpy@to to `*.39uc  1 p 2 0 ]
+[v strcpy@from from `*.25Cuc  1 p 2 2 ]
+"24
+} 0
+"570 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\ST7735_TFT.c
+[v _fillScreen fillScreen `(v  1 e 0 0 ]
+{
+[v fillScreen@color color `ui  1 p 2 19 ]
+"573
+} 0
+"454
+[v _fillRectangle fillRectangle `(v  1 e 0 0 ]
+{
+[v fillRectangle@x x `uc  1 a 1 wreg ]
+"456
+[v fillRectangle@lo lo `uc  1 a 1 17 ]
+[v fillRectangle@hi hi `uc  1 a 1 16 ]
+"454
+[v fillRectangle@x x `uc  1 a 1 wreg ]
+[v fillRectangle@y y `uc  1 p 1 7 ]
+[v fillRectangle@w w `uc  1 p 1 8 ]
+[v fillRectangle@h h `uc  1 p 1 9 ]
+[v fillRectangle@color color `ui  1 p 2 10 ]
+"457
+[v fillRectangle@x x `uc  1 a 1 18 ]
+"477
+} 0
+"565
+[v _fillCircle fillCircle `(v  1 e 0 0 ]
+{
+[v fillCircle@x0 x0 `i  1 p 2 42 ]
+[v fillCircle@y0 y0 `i  1 p 2 44 ]
+[v fillCircle@r r `i  1 p 2 46 ]
+[v fillCircle@color color `ui  1 p 2 48 ]
+"569
+} 0
+"540
+[v _fillCircleHelper fillCircleHelper `(v  1 e 0 0 ]
+{
+"542
+[v fillCircleHelper@y y `i  1 a 2 40 ]
+[v fillCircleHelper@x x `i  1 a 2 38 ]
+[v fillCircleHelper@f f `i  1 a 2 36 ]
+[v fillCircleHelper@ddF_y ddF_y `i  1 a 2 34 ]
+[v fillCircleHelper@ddF_x ddF_x `i  1 a 2 32 ]
+"540
+[v fillCircleHelper@x0 x0 `i  1 p 2 18 ]
+[v fillCircleHelper@y0 y0 `i  1 p 2 20 ]
+[v fillCircleHelper@r r `i  1 p 2 22 ]
+[v fillCircleHelper@cornername cornername `ui  1 p 2 24 ]
+[v fillCircleHelper@delta delta `i  1 p 2 26 ]
+[v fillCircleHelper@color color `ui  1 p 2 28 ]
+"563
+} 0
+"425
+[v _drawtext drawtext `(v  1 e 0 0 ]
+{
+[v drawtext@x x `uc  1 a 1 wreg ]
+"428
+[v drawtext@i i `ui  1 a 2 53 ]
+[v drawtext@textsize textsize `ui  1 a 2 50 ]
+"427
+[v drawtext@cursor_x cursor_x `uc  1 a 1 56 ]
+[v drawtext@cursor_y cursor_y `uc  1 a 1 55 ]
+"425
+[v drawtext@x x `uc  1 a 1 wreg ]
+[v drawtext@y y `uc  1 p 1 40 ]
+[v drawtext@_text _text `*.39uc  1 p 2 41 ]
+[v drawtext@color color `ui  1 p 2 43 ]
+[v drawtext@bg bg `ui  1 p 2 45 ]
+[v drawtext@size size `uc  1 p 1 47 ]
+"429
+[v drawtext@x x `uc  1 a 1 52 ]
+"441
+} 0
+"4 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"6
+[v strlen@cp cp `*.39Cuc  1 a 2 4 ]
+"4
+[v strlen@s s `*.39Cuc  1 p 2 0 ]
+"13
+} 0
+"398 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\ST7735_TFT.c
+[v _drawChar drawChar `(v  1 e 0 0 ]
+{
+[v drawChar@x x `uc  1 a 1 wreg ]
+"407
+[v drawChar@line line `uc  1 a 1 36 ]
+"400
+[v drawChar@i i `uc  1 a 1 39 ]
+[v drawChar@j j `uc  1 a 1 38 ]
+"398
+[v drawChar@x x `uc  1 a 1 wreg ]
+[v drawChar@y y `uc  1 p 1 29 ]
+[v drawChar@c c `uc  1 p 1 30 ]
+[v drawChar@color color `ui  1 p 2 31 ]
+[v drawChar@bg bg `ui  1 p 2 33 ]
+[v drawChar@size size `uc  1 p 1 35 ]
+"401
+[v drawChar@x x `uc  1 a 1 37 ]
+"423
+} 0
+"388
+[v _fillRect fillRect `(v  1 e 0 0 ]
+{
+[v fillRect@x x `uc  1 a 1 wreg ]
+"390
+[v fillRect@i i `i  1 a 2 27 ]
+"388
+[v fillRect@x x `uc  1 a 1 wreg ]
+[v fillRect@y y `uc  1 p 1 18 ]
+[v fillRect@w w `uc  1 p 1 19 ]
+[v fillRect@h h `uc  1 p 1 20 ]
+[v fillRect@color color `ui  1 p 2 21 ]
+"392
+[v fillRect@x x `uc  1 a 1 26 ]
+"396
+} 0
+"636
+[v _drawRect drawRect `(v  1 e 0 0 ]
+{
+[v drawRect@x x `ui  1 p 2 18 ]
+[v drawRect@y y `ui  1 p 2 20 ]
+[v drawRect@w w `ui  1 p 2 22 ]
+[v drawRect@h h `ui  1 p 2 24 ]
+[v drawRect@color color `ui  1 p 2 26 ]
+"642
+} 0
+"367
+[v _drawFastVLine drawFastVLine `(v  1 e 0 0 ]
+{
+[v drawFastVLine@x x `uc  1 a 1 wreg ]
+"369
+[v drawFastVLine@lo lo `uc  1 a 1 16 ]
+[v drawFastVLine@hi hi `uc  1 a 1 15 ]
+"367
+[v drawFastVLine@x x `uc  1 a 1 wreg ]
+[v drawFastVLine@y y `uc  1 p 1 7 ]
+[v drawFastVLine@h h `uc  1 p 1 8 ]
+[v drawFastVLine@color color `ui  1 p 2 9 ]
+"370
+[v drawFastVLine@x x `uc  1 a 1 17 ]
+"386
+} 0
+"575
+[v _drawFastHLine drawFastHLine `(v  1 e 0 0 ]
+{
+[v drawFastHLine@x x `uc  1 a 1 wreg ]
+"577
+[v drawFastHLine@lo lo `uc  1 a 1 16 ]
+[v drawFastHLine@hi hi `uc  1 a 1 15 ]
+"575
+[v drawFastHLine@x x `uc  1 a 1 wreg ]
+[v drawFastHLine@y y `uc  1 p 1 7 ]
+[v drawFastHLine@w w `uc  1 p 1 8 ]
+[v drawFastHLine@color color `ui  1 p 2 9 ]
+"578
+[v drawFastHLine@x x `uc  1 a 1 17 ]
+"593
+} 0
+"479
+[v _drawCircle drawCircle `(v  1 e 0 0 ]
+{
+"481
+[v drawCircle@y y `i  1 a 2 29 ]
+[v drawCircle@x x `i  1 a 2 27 ]
+[v drawCircle@f f `i  1 a 2 25 ]
+[v drawCircle@ddF_y ddF_y `i  1 a 2 23 ]
+[v drawCircle@ddF_x ddF_x `i  1 a 2 21 ]
+"479
+[v drawCircle@x0 x0 `i  1 p 2 11 ]
+[v drawCircle@y0 y0 `i  1 p 2 13 ]
+[v drawCircle@r r `i  1 p 2 15 ]
+[v drawCircle@color color `ui  1 p 2 17 ]
+"505
+} 0
+"358
+[v _drawPixel drawPixel `(v  1 e 0 0 ]
+{
+[v drawPixel@x x `uc  1 a 1 wreg ]
+[v drawPixel@x x `uc  1 a 1 wreg ]
+[v drawPixel@y y `uc  1 p 1 7 ]
+[v drawPixel@color color `ui  1 p 2 8 ]
+"360
+[v drawPixel@x x `uc  1 a 1 10 ]
+"365
+} 0
+"343
+[v _setAddrWindow setAddrWindow `(v  1 e 0 0 ]
+{
+[v setAddrWindow@x0 x0 `uc  1 a 1 wreg ]
+[v setAddrWindow@x0 x0 `uc  1 a 1 wreg ]
+[v setAddrWindow@y0 y0 `uc  1 p 1 3 ]
+[v setAddrWindow@x1 x1 `uc  1 p 1 4 ]
+[v setAddrWindow@y1 y1 `uc  1 p 1 5 ]
+"345
+[v setAddrWindow@x0 x0 `uc  1 a 1 6 ]
+"356
+} 0
+"595
+[v _TFT_GreenTab_Initialize TFT_GreenTab_Initialize `(v  1 e 0 0 ]
+{
+"610
+} 0
+"289
+[v _Rcmd3 Rcmd3 `(v  1 e 0 0 ]
+{
+"305
+} 0
+"275
+[v _Rcmd2red Rcmd2red `(v  1 e 0 0 ]
+{
+"287
+} 0
+"228
+[v _Rcmd1 Rcmd1 `(v  1 e 0 0 ]
+{
+"273
+} 0
+"156
+[v _write_data write_data `(v  1 e 0 0 ]
+{
+[v write_data@data_ data_ `uc  1 a 1 wreg ]
+[v write_data@data_ data_ `uc  1 a 1 wreg ]
+"158
+[v write_data@data_ data_ `uc  1 a 1 2 ]
+"162
+} 0
+"145
+[v _write_command write_command `(v  1 e 0 0 ]
+{
+[v write_command@cmd_ cmd_ `uc  1 a 1 wreg ]
+[v write_command@cmd_ cmd_ `uc  1 a 1 wreg ]
+"147
+[v write_command@cmd_ cmd_ `uc  1 a 1 2 ]
+"154
+} 0
+"136
+[v _spiwrite spiwrite `(v  1 e 0 0 ]
+{
+[v spiwrite@spidata spidata `uc  1 a 1 wreg ]
+"138
+[v spiwrite@x x `uc  1 a 1 0 ]
+"136
+[v spiwrite@spidata spidata `uc  1 a 1 wreg ]
+"139
+[v spiwrite@spidata spidata `uc  1 a 1 1 ]
+"143
+} 0
+"164
+[v _LCD_Reset LCD_Reset `(v  1 e 0 0 ]
+{
+"169
+} 0
+"11
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+{
+"17
+[v delay_ms@count count `i  1 a 2 10 ]
+"11
+[v delay_ms@ms ms `i  1 p 2 6 ]
+"31
+} 0
+"15 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"25 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\utils.c
+[v _Init_UART Init_UART `(v  1 e 0 0 ]
+{
+"31
+} 0
+"73 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\uopen.c
+[v _OpenUSART OpenUSART `(v  1 e 0 0 ]
+{
+[v OpenUSART@config config `uc  1 a 1 wreg ]
+[v OpenUSART@config config `uc  1 a 1 wreg ]
+[v OpenUSART@spbrg spbrg `ui  1 p 2 0 ]
+"75
+[v OpenUSART@config config `uc  1 a 1 2 ]
+"143
+} 0
+"18 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\utils.c
+[v _Init_ADC Init_ADC `(v  1 e 0 0 ]
+{
+"23
+} 0
+"108 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 8 and 9\lab8.X\lab8.c
+[v _Day_Mode Day_Mode `(v  1 e 0 0 ]
+{
+"111
+} 0
