@@ -4996,16 +4996,14 @@ int dc;
 
 
 
-if (temp < set_temp)
+if (temp >= set_temp)
 {
 int diff_temp = (temp-set_temp);
 dc = diff_temp * 4;
-}
-
 if (dc > 100)
 dc = 100;
-
-if (temp > 100)
+}
+if (temp < set_temp)
 dc = 0;
 
 return (dc);
@@ -5014,14 +5012,14 @@ return (dc);
 void Monitor_Fan()
 {
 
-# 45
+# 43
 if (FANMODE == 1)
 {
-get_duty_cycle (tempF, fan_set_temp);
+duty_cycle = get_duty_cycle (tempF, fan_set_temp);
 do_update_pwm(duty_cycle);
 }
 
-# 57
+# 55
 if (FAN_TIMER_MODE != 0)
 {
 if (FAN_TIMER_TIME != 0)

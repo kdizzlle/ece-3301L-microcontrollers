@@ -189,7 +189,7 @@ void Update_Screen(void)
 
 
         DC_Txt[0] = duty_cycle/100  + '0';
-        DC_Txt[1] = duty_cycle/10  + '0'; 
+        DC_Txt[1] = (duty_cycle/10)%10  + '0'; 
         DC_Txt[2] = duty_cycle%10  + '0';
 
         Volt_Txt[0] = ((int)  volt        ) + '0';

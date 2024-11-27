@@ -20,16 +20,14 @@ int get_duty_cycle(int temp, int set_temp)
 // if the temp is less than the set_temp, then the value of dc is equal to 4 times the difference between the two temperatuees
 // if the calculated value of dc is greater than 100, set it to 100
 // if the temp is greater, then dc is zero
-    if (temp < set_temp)
+    if (temp >= set_temp)
     {
         int diff_temp = (temp-set_temp);
         dc = diff_temp * 4;
-    }
-    
-    if (dc > 100)
+        if (dc > 100)
         dc = 100;
-    
-    if (temp > 100)
+    }
+    if (temp < set_temp)
         dc = 0;
     
     return (dc);
@@ -44,7 +42,7 @@ void Monitor_Fan()
 
     if (FANMODE == 1)
     {
-        get_duty_cycle (tempF, fan_set_temp);
+        duty_cycle = get_duty_cycle (tempF, fan_set_temp);
         do_update_pwm(duty_cycle);
     }
     

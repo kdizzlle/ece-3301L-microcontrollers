@@ -72,23 +72,23 @@ TRUE 1
 [v _OpenUSART OpenUSART `(v  1 e 0 0 ]
 "16 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _get_duty_cycle get_duty_cycle `(i  1 e 2 0 ]
-"38
+"36
 [v _Monitor_Fan Monitor_Fan `(v  1 e 0 0 ]
-"70
+"68
 [v _get_RPM get_RPM `(i  1 e 2 0 ]
-"79
+"77
 [v _Toggle_Fan Toggle_Fan `(v  1 e 0 0 ]
-"89
+"87
 [v _Turn_Off_Fan Turn_Off_Fan `(v  1 e 0 0 ]
-"98
+"96
 [v _Turn_On_Fan Turn_On_Fan `(v  1 e 0 0 ]
-"109
+"107
 [v _Increase_Duty_Cycle Increase_Duty_Cycle `(v  1 e 0 0 ]
-"129
+"127
 [v _Decrease_Duty_Cycle Decrease_Duty_Cycle `(v  1 e 0 0 ]
-"146
+"144
 [v _Do_Change_Fan_Timer_Mode_Plus Do_Change_Fan_Timer_Mode_Plus `(v  1 e 0 0 ]
-"158
+"156
 [v _Do_Change_Fan_Timer_Mode_Minus Do_Change_Fan_Timer_Mode_Minus `(v  1 e 0 0 ]
 "10 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\I2C_Soft.c
 [v _I2C_Init I2C_Init `(v  1 e 0 0 ]
@@ -928,15 +928,15 @@ TRUE 1
 [v Update_Screen@neg_tempC neg_tempC `i  1 a 2 75 ]
 "219
 } 0
-"79 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"77 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Toggle_Fan Toggle_Fan `(v  1 e 0 0 ]
 {
-"87
+"85
 } 0
-"98
+"96
 [v _Turn_On_Fan Turn_On_Fan `(v  1 e 0 0 ]
 {
-"106
+"104
 } 0
 "36 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Setup_Fan_Temp.c
 [v _Setup_Fan_Temp Setup_Fan_Temp `(v  1 e 0 0 ]
@@ -974,22 +974,22 @@ TRUE 1
 [v Update_Setup_Fan_Screen@dc_char1 dc_char1 `uc  1 a 1 73 ]
 "178
 } 0
-"109 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"107 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Increase_Duty_Cycle Increase_Duty_Cycle `(v  1 e 0 0 ]
 {
-"127
+"125
 } 0
 "41 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Setup_Time.c
 [v _Do_Setup_Time Do_Setup_Time `(v  1 e 0 0 ]
 {
 "108
 } 0
-"70 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"68 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _get_RPM get_RPM `(i  1 e 2 0 ]
 {
-"73
+"71
 [v get_RPM@RPS RPS `i  1 a 2 32 ]
-"77
+"75
 } 0
 "14 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\utils.c
 [v _check_for_button_input check_for_button_input `(uc  1 e 1 0 ]
@@ -1066,10 +1066,10 @@ TRUE 1
 [v ___awtoft@c c `i  1 p 2 24 ]
 "42
 } 0
-"38 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"36 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Monitor_Fan Monitor_Fan `(v  1 e 0 0 ]
 {
-"68
+"66
 } 0
 "16
 [v _get_duty_cycle get_duty_cycle `(i  1 e 2 0 ]
@@ -1081,7 +1081,7 @@ TRUE 1
 "16
 [v get_duty_cycle@temp temp `i  1 p 2 16 ]
 [v get_duty_cycle@set_temp set_temp `i  1 p 2 18 ]
-"36
+"34
 } 0
 "229 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Setup_Time.c
 [v _Initialize_Setup_Time_Screen Initialize_Setup_Time_Screen `(v  1 e 0 0 ]
@@ -1432,10 +1432,10 @@ TRUE 1
 {
 "110
 } 0
-"89 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"87 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Turn_Off_Fan Turn_Off_Fan `(v  1 e 0 0 ]
 {
-"96
+"94
 } 0
 "464 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -1724,15 +1724,15 @@ TRUE 1
 {
 "109
 } 0
-"146 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"144 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Do_Change_Fan_Timer_Mode_Plus Do_Change_Fan_Timer_Mode_Plus `(v  1 e 0 0 ]
 {
-"156
+"154
 } 0
-"158
+"156
 [v _Do_Change_Fan_Timer_Mode_Minus Do_Change_Fan_Timer_Mode_Minus `(v  1 e 0 0 ]
 {
-"171
+"169
 } 0
 "77 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\utils.c
 [v _Do_Beep_Good Do_Beep_Good `(v  1 e 0 0 ]
@@ -1754,10 +1754,10 @@ TRUE 1
 {
 "118
 } 0
-"129 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
+"127 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Decrease_Duty_Cycle Decrease_Duty_Cycle `(v  1 e 0 0 ]
 {
-"144
+"142
 } 0
 "66 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\utils.c
 [v _Do_Beep Do_Beep `(v  1 e 0 0 ]

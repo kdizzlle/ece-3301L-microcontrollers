@@ -1,15 +1,15 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "8 Fan_Support.c
 [v _FANMODE `uc ~T0 @X0 0 e ]
+"9
+[v _duty_cycle `uc ~T0 @X0 0 e ]
 "11
 [v _tempF `c ~T0 @X0 0 e ]
 "10
 [v _fan_set_temp `uc ~T0 @X0 0 e ]
 "8 Fan_Support.h
 [v _do_update_pwm `(v ~T0 @X0 0 ef1`uc ]
-"9 Fan_Support.c
-[v _duty_cycle `uc ~T0 @X0 0 e ]
-"12
+"12 Fan_Support.c
 [v _FAN_TIMER_MODE `uc ~T0 @X0 0 e ]
 [v _FAN_TIMER_TIME `uc ~T0 @X0 0 e ]
 "4 Fan_Support.h
@@ -3798,9 +3798,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "18
 [v _dc `i ~T0 @X0 1 a ]
 [; ;Fan_Support.c: 18: int dc;
-[; ;Fan_Support.c: 23: if (temp < set_temp)
+[; ;Fan_Support.c: 23: if (temp >= set_temp)
 "23
-[e $ ! < _temp _set_temp 393  ]
+[e $ ! >= _temp _set_temp 393  ]
 [; ;Fan_Support.c: 24: {
 "24
 {
@@ -3811,375 +3811,375 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Fan_Support.c: 26: dc = diff_temp * 4;
 "26
 [e = _dc * _diff_temp -> 4 `i ]
+[; ;Fan_Support.c: 27: if (dc > 100)
 "27
-}
-[e :U 393 ]
-[; ;Fan_Support.c: 27: }
-[; ;Fan_Support.c: 29: if (dc > 100)
-"29
 [e $ ! > _dc -> 100 `i 394  ]
-[; ;Fan_Support.c: 30: dc = 100;
-"30
+[; ;Fan_Support.c: 28: dc = 100;
+"28
 [e = _dc -> 100 `i ]
 [e :U 394 ]
-[; ;Fan_Support.c: 32: if (temp > 100)
-"32
-[e $ ! > _temp -> 100 `i 395  ]
-[; ;Fan_Support.c: 33: dc = 0;
-"33
+"29
+}
+[e :U 393 ]
+[; ;Fan_Support.c: 29: }
+[; ;Fan_Support.c: 30: if (temp < set_temp)
+"30
+[e $ ! < _temp _set_temp 395  ]
+[; ;Fan_Support.c: 31: dc = 0;
+"31
 [e = _dc -> 0 `i ]
 [e :U 395 ]
-[; ;Fan_Support.c: 35: return (dc);
-"35
+[; ;Fan_Support.c: 33: return (dc);
+"33
 [e ) _dc ]
 [e $UE 392  ]
-[; ;Fan_Support.c: 36: }
-"36
+[; ;Fan_Support.c: 34: }
+"34
 [e :UE 392 ]
 }
-"38
+"36
 [v _Monitor_Fan `(v ~T0 @X0 1 ef ]
-"39
+"37
 {
-[; ;Fan_Support.c: 38: void Monitor_Fan()
-[; ;Fan_Support.c: 39: {
+[; ;Fan_Support.c: 36: void Monitor_Fan()
+[; ;Fan_Support.c: 37: {
 [e :U _Monitor_Fan ]
 [f ]
-[; ;Fan_Support.c: 45: if (FANMODE == 1)
-"45
+[; ;Fan_Support.c: 43: if (FANMODE == 1)
+"43
 [e $ ! == -> _FANMODE `i -> 1 `i 397  ]
-[; ;Fan_Support.c: 46: {
-"46
+[; ;Fan_Support.c: 44: {
+"44
 {
-[; ;Fan_Support.c: 47: get_duty_cycle (tempF, fan_set_temp);
-"47
-[e ( _get_duty_cycle (2 , -> _tempF `i -> _fan_set_temp `i ]
-[; ;Fan_Support.c: 48: do_update_pwm(duty_cycle);
-"48
+[; ;Fan_Support.c: 45: duty_cycle = get_duty_cycle (tempF, fan_set_temp);
+"45
+[e = _duty_cycle -> ( _get_duty_cycle (2 , -> _tempF `i -> _fan_set_temp `i `uc ]
+[; ;Fan_Support.c: 46: do_update_pwm(duty_cycle);
+"46
 [e ( _do_update_pwm (1 _duty_cycle ]
-"49
+"47
 }
 [e :U 397 ]
-[; ;Fan_Support.c: 49: }
-[; ;Fan_Support.c: 57: if (FAN_TIMER_MODE != 0)
-"57
+[; ;Fan_Support.c: 47: }
+[; ;Fan_Support.c: 55: if (FAN_TIMER_MODE != 0)
+"55
 [e $ ! != -> _FAN_TIMER_MODE `i -> 0 `i 398  ]
-[; ;Fan_Support.c: 58: {
-"58
+[; ;Fan_Support.c: 56: {
+"56
 {
-[; ;Fan_Support.c: 59: if (FAN_TIMER_TIME != 0)
-"59
+[; ;Fan_Support.c: 57: if (FAN_TIMER_TIME != 0)
+"57
 [e $ ! != -> _FAN_TIMER_TIME `i -> 0 `i 399  ]
-[; ;Fan_Support.c: 60: FAN_TIMER_TIME--;
-"60
+[; ;Fan_Support.c: 58: FAN_TIMER_TIME--;
+"58
 [e -- _FAN_TIMER_TIME -> -> 1 `i `uc ]
 [e :U 399 ]
-[; ;Fan_Support.c: 61: if (FAN_TIMER_TIME == 0)
-"61
+[; ;Fan_Support.c: 59: if (FAN_TIMER_TIME == 0)
+"59
 [e $ ! == -> _FAN_TIMER_TIME `i -> 0 `i 400  ]
-[; ;Fan_Support.c: 62: {
-"62
+[; ;Fan_Support.c: 60: {
+"60
 {
-[; ;Fan_Support.c: 63: FAN_TIMER_MODE = 0;
-"63
+[; ;Fan_Support.c: 61: FAN_TIMER_MODE = 0;
+"61
 [e = _FAN_TIMER_MODE -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 64: Turn_Off_Fan();
-"64
+[; ;Fan_Support.c: 62: Turn_Off_Fan();
+"62
 [e ( _Turn_Off_Fan ..  ]
-"65
+"63
 }
 [e :U 400 ]
-"66
+"64
 }
 [e :U 398 ]
-[; ;Fan_Support.c: 65: }
+[; ;Fan_Support.c: 63: }
+[; ;Fan_Support.c: 64: }
 [; ;Fan_Support.c: 66: }
-[; ;Fan_Support.c: 68: }
-"68
+"66
 [e :UE 396 ]
 }
-"70
+"68
 [v _get_RPM `(i ~T0 @X0 1 ef ]
-"71
+"69
 {
-[; ;Fan_Support.c: 70: int get_RPM()
-[; ;Fan_Support.c: 71: {
+[; ;Fan_Support.c: 68: int get_RPM()
+[; ;Fan_Support.c: 69: {
 [e :U _get_RPM ]
 [f ]
-"73
+"71
 [v _RPS `i ~T0 @X0 1 a ]
-[; ;Fan_Support.c: 73: int RPS = TMR3L / 2;
+[; ;Fan_Support.c: 71: int RPS = TMR3L / 2;
 [e = _RPS / -> _TMR3L `i -> 2 `i ]
-[; ;Fan_Support.c: 75: TMR3L = 0;
-"75
+[; ;Fan_Support.c: 73: TMR3L = 0;
+"73
 [e = _TMR3L -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 76: return (RPS * 60);
-"76
+[; ;Fan_Support.c: 74: return (RPS * 60);
+"74
 [e ) * _RPS -> 60 `i ]
 [e $UE 401  ]
-[; ;Fan_Support.c: 77: }
-"77
+[; ;Fan_Support.c: 75: }
+"75
 [e :UE 401 ]
 }
-"79
+"77
 [v _Toggle_Fan `(v ~T0 @X0 1 ef ]
-"80
+"78
 {
-[; ;Fan_Support.c: 79: void Toggle_Fan()
-[; ;Fan_Support.c: 80: {
+[; ;Fan_Support.c: 77: void Toggle_Fan()
+[; ;Fan_Support.c: 78: {
 [e :U _Toggle_Fan ]
 [f ]
-[; ;Fan_Support.c: 83: if (FAN == 1)
-"83
+[; ;Fan_Support.c: 81: if (FAN == 1)
+"81
 [e $ ! == -> _FAN `i -> 1 `i 403  ]
-[; ;Fan_Support.c: 84: Turn_Off_Fan();
-"84
+[; ;Fan_Support.c: 82: Turn_Off_Fan();
+"82
 [e ( _Turn_Off_Fan ..  ]
 [e $U 404  ]
-"85
+"83
 [e :U 403 ]
-[; ;Fan_Support.c: 85: else
-[; ;Fan_Support.c: 86: Turn_On_Fan();
-"86
+[; ;Fan_Support.c: 83: else
+[; ;Fan_Support.c: 84: Turn_On_Fan();
+"84
 [e ( _Turn_On_Fan ..  ]
 [e :U 404 ]
-[; ;Fan_Support.c: 87: }
-"87
+[; ;Fan_Support.c: 85: }
+"85
 [e :UE 402 ]
 }
-"89
+"87
 [v _Turn_Off_Fan `(v ~T0 @X0 1 ef ]
-"90
+"88
 {
-[; ;Fan_Support.c: 89: void Turn_Off_Fan()
-[; ;Fan_Support.c: 90: {
+[; ;Fan_Support.c: 87: void Turn_Off_Fan()
+[; ;Fan_Support.c: 88: {
 [e :U _Turn_Off_Fan ]
 [f ]
-[; ;Fan_Support.c: 91: printf ("Fan is turned off\r\n");
-"91
+[; ;Fan_Support.c: 89: printf ("Fan is turned off\r\n");
+"89
 [e ( _printf :s 1C ]
-[; ;Fan_Support.c: 93: FAN = 0;
-"93
+[; ;Fan_Support.c: 91: FAN = 0;
+"91
 [e = _FAN -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 94: PORTDbits.RD1 = 0;
-"94
+[; ;Fan_Support.c: 92: PORTDbits.RD1 = 0;
+"92
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 95: PORTDbits.RD2 = 0;
-"95
+[; ;Fan_Support.c: 93: PORTDbits.RD2 = 0;
+"93
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 96: }
-"96
+[; ;Fan_Support.c: 94: }
+"94
 [e :UE 405 ]
 }
-"98
+"96
 [v _Turn_On_Fan `(v ~T0 @X0 1 ef ]
-"99
+"97
 {
-[; ;Fan_Support.c: 98: void Turn_On_Fan()
-[; ;Fan_Support.c: 99: {
+[; ;Fan_Support.c: 96: void Turn_On_Fan()
+[; ;Fan_Support.c: 97: {
 [e :U _Turn_On_Fan ]
 [f ]
-[; ;Fan_Support.c: 100: printf ("Fan is turned on\r\n");
-"100
+[; ;Fan_Support.c: 98: printf ("Fan is turned on\r\n");
+"98
 [e ( _printf :s 2C ]
-[; ;Fan_Support.c: 102: FAN = 1;
-"102
+[; ;Fan_Support.c: 100: FAN = 1;
+"100
 [e = _FAN -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 103: PORTDbits.RD1 = 1;
-"103
+[; ;Fan_Support.c: 101: PORTDbits.RD1 = 1;
+"101
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 104: PORTDbits.RD2 = 1;
-"104
+[; ;Fan_Support.c: 102: PORTDbits.RD2 = 1;
+"102
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 105: do_update_pwm(duty_cycle);
-"105
+[; ;Fan_Support.c: 103: do_update_pwm(duty_cycle);
+"103
 [e ( _do_update_pwm (1 _duty_cycle ]
-[; ;Fan_Support.c: 106: }
-"106
+[; ;Fan_Support.c: 104: }
+"104
 [e :UE 406 ]
 }
-"109
+"107
 [v _Increase_Duty_Cycle `(v ~T0 @X0 1 ef ]
-"110
+"108
 {
-[; ;Fan_Support.c: 109: void Increase_Duty_Cycle()
-[; ;Fan_Support.c: 110: {
+[; ;Fan_Support.c: 107: void Increase_Duty_Cycle()
+[; ;Fan_Support.c: 108: {
 [e :U _Increase_Duty_Cycle ]
 [f ]
-[; ;Fan_Support.c: 111: if (FANMODE == 0)
-"111
+[; ;Fan_Support.c: 109: if (FANMODE == 0)
+"109
 [e $ ! == -> _FANMODE `i -> 0 `i 408  ]
-[; ;Fan_Support.c: 112: {
-"112
+[; ;Fan_Support.c: 110: {
+"110
 {
-[; ;Fan_Support.c: 115: if (duty_cycle == 100)
-"115
+[; ;Fan_Support.c: 113: if (duty_cycle == 100)
+"113
 [e $ ! == -> _duty_cycle `i -> 100 `i 409  ]
-[; ;Fan_Support.c: 116: {
+[; ;Fan_Support.c: 114: {
+"114
+{
+[; ;Fan_Support.c: 115: Do_Beep();
+"115
+[e ( _Do_Beep ..  ]
+[; ;Fan_Support.c: 116: Do_Beep();
 "116
-{
-[; ;Fan_Support.c: 117: Do_Beep();
+[e ( _Do_Beep ..  ]
+[; ;Fan_Support.c: 117: do_update_pwm(duty_cycle);
 "117
-[e ( _Do_Beep ..  ]
-[; ;Fan_Support.c: 118: Do_Beep();
+[e ( _do_update_pwm (1 _duty_cycle ]
 "118
-[e ( _Do_Beep ..  ]
-[; ;Fan_Support.c: 119: do_update_pwm(duty_cycle);
-"119
-[e ( _do_update_pwm (1 _duty_cycle ]
-"120
 }
-[; ;Fan_Support.c: 120: }
+[; ;Fan_Support.c: 118: }
 [e $U 410  ]
-"121
+"119
 [e :U 409 ]
-[; ;Fan_Support.c: 121: else
-[; ;Fan_Support.c: 122: {
-"122
+[; ;Fan_Support.c: 119: else
+[; ;Fan_Support.c: 120: {
+"120
 {
-[; ;Fan_Support.c: 123: duty_cycle = duty_cycle + 5;
-"123
+[; ;Fan_Support.c: 121: duty_cycle = duty_cycle + 5;
+"121
 [e = _duty_cycle -> + -> _duty_cycle `i -> 5 `i `uc ]
-[; ;Fan_Support.c: 124: do_update_pwm(duty_cycle);
-"124
+[; ;Fan_Support.c: 122: do_update_pwm(duty_cycle);
+"122
 [e ( _do_update_pwm (1 _duty_cycle ]
-"125
+"123
 }
 [e :U 410 ]
-"126
+"124
 }
 [e :U 408 ]
+[; ;Fan_Support.c: 123: }
+[; ;Fan_Support.c: 124: }
 [; ;Fan_Support.c: 125: }
-[; ;Fan_Support.c: 126: }
-[; ;Fan_Support.c: 127: }
-"127
+"125
 [e :UE 407 ]
 }
-"129
+"127
 [v _Decrease_Duty_Cycle `(v ~T0 @X0 1 ef ]
-"130
+"128
 {
-[; ;Fan_Support.c: 129: void Decrease_Duty_Cycle()
-[; ;Fan_Support.c: 130: {
+[; ;Fan_Support.c: 127: void Decrease_Duty_Cycle()
+[; ;Fan_Support.c: 128: {
 [e :U _Decrease_Duty_Cycle ]
 [f ]
-[; ;Fan_Support.c: 133: if (duty_cycle == 0)
-"133
+[; ;Fan_Support.c: 131: if (duty_cycle == 0)
+"131
 [e $ ! == -> _duty_cycle `i -> 0 `i 412  ]
-[; ;Fan_Support.c: 134: {
+[; ;Fan_Support.c: 132: {
+"132
+{
+[; ;Fan_Support.c: 133: Do_Beep();
+"133
+[e ( _Do_Beep ..  ]
+[; ;Fan_Support.c: 134: Do_Beep();
 "134
-{
-[; ;Fan_Support.c: 135: Do_Beep();
+[e ( _Do_Beep ..  ]
+[; ;Fan_Support.c: 135: do_update_pwm(duty_cycle);
 "135
-[e ( _Do_Beep ..  ]
-[; ;Fan_Support.c: 136: Do_Beep();
+[e ( _do_update_pwm (1 _duty_cycle ]
 "136
-[e ( _Do_Beep ..  ]
-[; ;Fan_Support.c: 137: do_update_pwm(duty_cycle);
-"137
-[e ( _do_update_pwm (1 _duty_cycle ]
-"138
 }
-[; ;Fan_Support.c: 138: }
+[; ;Fan_Support.c: 136: }
 [e $U 413  ]
-"139
+"137
 [e :U 412 ]
-[; ;Fan_Support.c: 139: else
-[; ;Fan_Support.c: 140: {
-"140
+[; ;Fan_Support.c: 137: else
+[; ;Fan_Support.c: 138: {
+"138
 {
-[; ;Fan_Support.c: 141: duty_cycle = duty_cycle - 5;
-"141
+[; ;Fan_Support.c: 139: duty_cycle = duty_cycle - 5;
+"139
 [e = _duty_cycle -> - -> _duty_cycle `i -> 5 `i `uc ]
-[; ;Fan_Support.c: 142: do_update_pwm(duty_cycle);
-"142
+[; ;Fan_Support.c: 140: do_update_pwm(duty_cycle);
+"140
 [e ( _do_update_pwm (1 _duty_cycle ]
-"143
+"141
 }
 [e :U 413 ]
-[; ;Fan_Support.c: 143: }
-[; ;Fan_Support.c: 144: }
-"144
+[; ;Fan_Support.c: 141: }
+[; ;Fan_Support.c: 142: }
+"142
 [e :UE 411 ]
 }
-"146
+"144
 [v _Do_Change_Fan_Timer_Mode_Plus `(v ~T0 @X0 1 ef ]
-"147
+"145
 {
-[; ;Fan_Support.c: 146: void Do_Change_Fan_Timer_Mode_Plus()
-[; ;Fan_Support.c: 147: {
+[; ;Fan_Support.c: 144: void Do_Change_Fan_Timer_Mode_Plus()
+[; ;Fan_Support.c: 145: {
 [e :U _Do_Change_Fan_Timer_Mode_Plus ]
 [f ]
-[; ;Fan_Support.c: 148: if (FAN_TIMER_MODE < 3)
-"148
+[; ;Fan_Support.c: 146: if (FAN_TIMER_MODE < 3)
+"146
 [e $ ! < -> _FAN_TIMER_MODE `i -> 3 `i 415  ]
-[; ;Fan_Support.c: 149: {
-"149
+[; ;Fan_Support.c: 147: {
+"147
 {
-[; ;Fan_Support.c: 150: FAN_TIMER_MODE++;
-"150
+[; ;Fan_Support.c: 148: FAN_TIMER_MODE++;
+"148
 [e ++ _FAN_TIMER_MODE -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 151: FAN_TIMER_TIME= Timer_Table[FAN_TIMER_MODE];
-"151
+[; ;Fan_Support.c: 149: FAN_TIMER_TIME= Timer_Table[FAN_TIMER_MODE];
+"149
 [e = _FAN_TIMER_TIME *U + &U _Timer_Table * -> _FAN_TIMER_MODE `ux -> -> # *U &U _Timer_Table `ui `ux ]
-[; ;Fan_Support.c: 152: Do_Beep_Good();
-"152
+[; ;Fan_Support.c: 150: Do_Beep_Good();
+"150
 [e ( _Do_Beep_Good ..  ]
-"153
+"151
 }
-[; ;Fan_Support.c: 153: }
+[; ;Fan_Support.c: 151: }
 [e $U 416  ]
-"154
+"152
 [e :U 415 ]
-[; ;Fan_Support.c: 154: else Do_Beep_Bad();
+[; ;Fan_Support.c: 152: else Do_Beep_Bad();
 [e ( _Do_Beep_Bad ..  ]
 [e :U 416 ]
-[; ;Fan_Support.c: 156: }
-"156
+[; ;Fan_Support.c: 154: }
+"154
 [e :UE 414 ]
 }
-"158
+"156
 [v _Do_Change_Fan_Timer_Mode_Minus `(v ~T0 @X0 1 ef ]
-"159
+"157
 {
-[; ;Fan_Support.c: 158: void Do_Change_Fan_Timer_Mode_Minus()
-[; ;Fan_Support.c: 159: {
+[; ;Fan_Support.c: 156: void Do_Change_Fan_Timer_Mode_Minus()
+[; ;Fan_Support.c: 157: {
 [e :U _Do_Change_Fan_Timer_Mode_Minus ]
 [f ]
-[; ;Fan_Support.c: 160: if (FAN_TIMER_MODE == 0)
-"160
+[; ;Fan_Support.c: 158: if (FAN_TIMER_MODE == 0)
+"158
 [e $ ! == -> _FAN_TIMER_MODE `i -> 0 `i 418  ]
-[; ;Fan_Support.c: 161: {
-"161
+[; ;Fan_Support.c: 159: {
+"159
 {
-[; ;Fan_Support.c: 162: Do_Beep_Bad();
-"162
+[; ;Fan_Support.c: 160: Do_Beep_Bad();
+"160
 [e ( _Do_Beep_Bad ..  ]
-"163
+"161
 }
-[; ;Fan_Support.c: 163: }
+[; ;Fan_Support.c: 161: }
 [e $U 419  ]
-"164
+"162
 [e :U 418 ]
-[; ;Fan_Support.c: 164: else
-[; ;Fan_Support.c: 165: {
-"165
+[; ;Fan_Support.c: 162: else
+[; ;Fan_Support.c: 163: {
+"163
 {
-[; ;Fan_Support.c: 166: FAN_TIMER_MODE--;
-"166
+[; ;Fan_Support.c: 164: FAN_TIMER_MODE--;
+"164
 [e -- _FAN_TIMER_MODE -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 167: FAN_TIMER_TIME= Timer_Table[FAN_TIMER_MODE];
-"167
+[; ;Fan_Support.c: 165: FAN_TIMER_TIME= Timer_Table[FAN_TIMER_MODE];
+"165
 [e = _FAN_TIMER_TIME *U + &U _Timer_Table * -> _FAN_TIMER_MODE `ux -> -> # *U &U _Timer_Table `ui `ux ]
-[; ;Fan_Support.c: 168: Do_Beep_Good();
-"168
+[; ;Fan_Support.c: 166: Do_Beep_Good();
+"166
 [e ( _Do_Beep_Good ..  ]
-"169
+"167
 }
 [e :U 419 ]
+[; ;Fan_Support.c: 167: }
 [; ;Fan_Support.c: 169: }
-[; ;Fan_Support.c: 171: }
-"171
+"169
 [e :UE 417 ]
 }
 [p f _printf 8388608 ]

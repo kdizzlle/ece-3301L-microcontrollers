@@ -4366,9 +4366,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main_Screen.c: 191: DC_Txt[0] = duty_cycle/100 + '0';
 "191
 [e = *U + &U _DC_Txt * -> -> -> 0 `i `ui `ux -> -> # *U &U _DC_Txt `ui `ux -> + -> / -> _duty_cycle `i -> 100 `i `ui -> 48 `ui `uc ]
-[; ;Main_Screen.c: 192: DC_Txt[1] = duty_cycle/10 + '0';
+[; ;Main_Screen.c: 192: DC_Txt[1] = (duty_cycle/10)%10 + '0';
 "192
-[e = *U + &U _DC_Txt * -> -> -> 1 `i `ui `ux -> -> # *U &U _DC_Txt `ui `ux -> + -> / -> _duty_cycle `i -> 10 `i `ui -> 48 `ui `uc ]
+[e = *U + &U _DC_Txt * -> -> -> 1 `i `ui `ux -> -> # *U &U _DC_Txt `ui `ux -> + -> % / -> _duty_cycle `i -> 10 `i -> 10 `i `ui -> 48 `ui `uc ]
 [; ;Main_Screen.c: 193: DC_Txt[2] = duty_cycle%10 + '0';
 "193
 [e = *U + &U _DC_Txt * -> -> -> 2 `i `ui `ux -> -> # *U &U _DC_Txt `ui `ux -> + -> % -> _duty_cycle `i -> 10 `i `ui -> 48 `ui `uc ]
