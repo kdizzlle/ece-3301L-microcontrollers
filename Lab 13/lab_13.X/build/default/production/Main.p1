@@ -4383,9 +4383,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 90: OSCCON=0x70;
 "90
 [e = _OSCCON -> -> 112 `i `uc ]
-[; ;Main.c: 92: ADCON1= 0x0F;
+[; ;Main.c: 92: ADCON1= 0x0E;
 "92
-[e = _ADCON1 -> -> 15 `i `uc ]
+[e = _ADCON1 -> -> 14 `i `uc ]
 [; ;Main.c: 93: TRISA = 0x03;
 "93
 [e = _TRISA -> -> 3 `i `uc ]
@@ -4476,9 +4476,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 132: rpm = get_RPM();
 "132
 [e = _rpm ( _get_RPM ..  ]
-[; ;Main.c: 135: volt = Read_Volt(0);
+[; ;Main.c: 135: volt = Read_Volt(1);
 "135
-[e = _volt ( _Read_Volt (1 -> -> 0 `i `uc ]
+[e = _volt ( _Read_Volt (1 -> -> 1 `i `uc ]
 [; ;Main.c: 136: if (volt > 3.000) light_flag = 1;
 "136
 [e $ ! > -> _volt `d .3.000 402  ]

@@ -89,7 +89,7 @@ void Do_Init()                      // Initialize the ports
     Init_ADC();
     OSCCON=0x70;                    // Set oscillator to 8 MHz 
     
-    ADCON1= 0x0F;
+    ADCON1= 0x0E;
     TRISA = 0x03;
     TRISB = 0x07;
     TRISC = 0x01;
@@ -132,7 +132,7 @@ void main()
             rpm = get_RPM();            
  
 
-            volt = Read_Volt(0);
+            volt = Read_Volt(1);
             if (volt > 3.000) light_flag = 1;
             tempC = DS1621_Read_Temp();
             tempF = (tempC * 9 / 5) + 32;

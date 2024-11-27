@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.34 build -361300703 
-                                                                                               Tue Nov 26 17:17:21 2024
+                                                                                               Tue Nov 26 18:04:52 2024
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
      1                           	processor	18F4620
@@ -2797,8 +2797,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
   2786  001AF6  C01F  F05C         	movff	?_get_RPM,_rpm
   2787  001AFA  C020  F05D         	movff	?_get_RPM+1,_rpm+1
   2788                           
-  2789                           ;Main.c: 135: volt = Read_Volt(0);
-  2790  001AFE  0E00               	movlw	0
+  2789                           ;Main.c: 135: volt = Read_Volt(1);
+  2790  001AFE  0E01               	movlw	1
   2791  001B00  EC13  F021         	call	_Read_Volt
   2792  001B04  C03D  F0B8         	movff	?_Read_Volt,_volt
   2793  001B08  C03E  F0B9         	movff	?_Read_Volt+1,_volt+1
@@ -13313,8 +13313,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
  12988  0043C4  0E70               	movlw	112
  12989  0043C6  6ED3               	movwf	4051,c	;volatile
  12990                           
- 12991                           ;Main.c: 92: ADCON1= 0x0F;
- 12992  0043C8  0E0F               	movlw	15
+ 12991                           ;Main.c: 92: ADCON1= 0x0E;
+ 12992  0043C8  0E0E               	movlw	14
  12993  0043CA  6EC1               	movwf	4033,c	;volatile
  12994                           
  12995                           ;Main.c: 93: TRISA = 0x03;
@@ -27519,7 +27519,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.34 build -361300703 
-Symbol Table                                                                                   Tue Nov 26 17:17:21 2024
+Symbol Table                                                                                   Tue Nov 26 18:04:52 2024
 
                           __size_of_I2C_Start 0012                                   _SSPSTATbits 000FC7  
                           __size_of_I2C_Write 003E                                            l40 4040  

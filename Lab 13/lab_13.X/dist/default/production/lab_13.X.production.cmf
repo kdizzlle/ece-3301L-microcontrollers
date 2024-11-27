@@ -11,6 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\kelly\AppData\Local\Temp\spl8.obj
+idloc IDLOC 0 200000 200000 8 1
+reset_vec CODE 0 0 0 4 1
+end_init CODE 0 18 18 4 1
+config CONFIG 0 300000 300000 E 1
 $dist/default/production\lab_13.X.production.obj
 cinit CODE 0 42FA 42FA 62 1
 intcode_body CODE 0 3D8E 3D8E 90 1
@@ -141,11 +146,6 @@ text115 CODE 0 4DE2 4DE2 A 1
 text116 CODE 0 4954 4954 2C 1
 bssCOMRAM COMRAM 1 5A 5A 12 1
 mediumconst MEDIUMCONST 0 FBC0 FBC0 440 1
-$C:\Users\kelly\AppData\Local\Temp\slo8.obj
-idloc IDLOC 0 200000 200000 8 1
-reset_vec CODE 0 0 0 4 1
-end_init CODE 0 18 18 4 1
-config CONFIG 0 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -1453,54 +1453,54 @@ FF6 text1 CODE >191:C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301
 42EC text42 CODE >60:C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\I2C_Support.c
 42F4 text42 CODE >61:C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\I2C_Support.c
 42F8 text42 CODE >62:C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\I2C_Support.c
-42FA cinit CODE >4822:C:\Users\kelly\AppData\Local\Temp\slo8.
-42FA cinit CODE >4824:C:\Users\kelly\AppData\Local\Temp\slo8.
-42FA cinit CODE >4827:C:\Users\kelly\AppData\Local\Temp\slo8.
-42FA cinit CODE >5120:C:\Users\kelly\AppData\Local\Temp\slo8.
-42FE cinit CODE >5121:C:\Users\kelly\AppData\Local\Temp\slo8.
-4300 cinit CODE >5122:C:\Users\kelly\AppData\Local\Temp\slo8.
-4300 cinit CODE >5123:C:\Users\kelly\AppData\Local\Temp\slo8.
-4302 cinit CODE >5124:C:\Users\kelly\AppData\Local\Temp\slo8.
-4304 cinit CODE >5125:C:\Users\kelly\AppData\Local\Temp\slo8.
-4306 cinit CODE >5128:C:\Users\kelly\AppData\Local\Temp\slo8.
-430A cinit CODE >5129:C:\Users\kelly\AppData\Local\Temp\slo8.
-430C cinit CODE >5130:C:\Users\kelly\AppData\Local\Temp\slo8.
-430C cinit CODE >5131:C:\Users\kelly\AppData\Local\Temp\slo8.
-430E cinit CODE >5132:C:\Users\kelly\AppData\Local\Temp\slo8.
-4310 cinit CODE >5133:C:\Users\kelly\AppData\Local\Temp\slo8.
-4312 cinit CODE >5138:C:\Users\kelly\AppData\Local\Temp\slo8.
-4314 cinit CODE >5139:C:\Users\kelly\AppData\Local\Temp\slo8.
-4316 cinit CODE >5140:C:\Users\kelly\AppData\Local\Temp\slo8.
-4318 cinit CODE >5141:C:\Users\kelly\AppData\Local\Temp\slo8.
-431A cinit CODE >5142:C:\Users\kelly\AppData\Local\Temp\slo8.
-431C cinit CODE >5143:C:\Users\kelly\AppData\Local\Temp\slo8.
-431E cinit CODE >5144:C:\Users\kelly\AppData\Local\Temp\slo8.
-4322 cinit CODE >5145:C:\Users\kelly\AppData\Local\Temp\slo8.
-4326 cinit CODE >5146:C:\Users\kelly\AppData\Local\Temp\slo8.
-4326 cinit CODE >5147:C:\Users\kelly\AppData\Local\Temp\slo8.
-4328 cinit CODE >5148:C:\Users\kelly\AppData\Local\Temp\slo8.
-432C cinit CODE >5149:C:\Users\kelly\AppData\Local\Temp\slo8.
-432E cinit CODE >5150:C:\Users\kelly\AppData\Local\Temp\slo8.
-4330 cinit CODE >5151:C:\Users\kelly\AppData\Local\Temp\slo8.
-4332 cinit CODE >5155:C:\Users\kelly\AppData\Local\Temp\slo8.
-4334 cinit CODE >5156:C:\Users\kelly\AppData\Local\Temp\slo8.
-4336 cinit CODE >5157:C:\Users\kelly\AppData\Local\Temp\slo8.
-4338 cinit CODE >5158:C:\Users\kelly\AppData\Local\Temp\slo8.
-433A cinit CODE >5159:C:\Users\kelly\AppData\Local\Temp\slo8.
-433C cinit CODE >5160:C:\Users\kelly\AppData\Local\Temp\slo8.
-433E cinit CODE >5161:C:\Users\kelly\AppData\Local\Temp\slo8.
-4342 cinit CODE >5162:C:\Users\kelly\AppData\Local\Temp\slo8.
-4346 cinit CODE >5163:C:\Users\kelly\AppData\Local\Temp\slo8.
-4346 cinit CODE >5164:C:\Users\kelly\AppData\Local\Temp\slo8.
-4348 cinit CODE >5165:C:\Users\kelly\AppData\Local\Temp\slo8.
-434C cinit CODE >5166:C:\Users\kelly\AppData\Local\Temp\slo8.
-434E cinit CODE >5167:C:\Users\kelly\AppData\Local\Temp\slo8.
-4350 cinit CODE >5168:C:\Users\kelly\AppData\Local\Temp\slo8.
-4352 cinit CODE >5174:C:\Users\kelly\AppData\Local\Temp\slo8.
-4352 cinit CODE >5176:C:\Users\kelly\AppData\Local\Temp\slo8.
-4354 cinit CODE >5177:C:\Users\kelly\AppData\Local\Temp\slo8.
-4356 cinit CODE >5178:C:\Users\kelly\AppData\Local\Temp\slo8.
-4358 cinit CODE >5179:C:\Users\kelly\AppData\Local\Temp\slo8.
+42FA cinit CODE >4822:C:\Users\kelly\AppData\Local\Temp\spl8.
+42FA cinit CODE >4824:C:\Users\kelly\AppData\Local\Temp\spl8.
+42FA cinit CODE >4827:C:\Users\kelly\AppData\Local\Temp\spl8.
+42FA cinit CODE >5120:C:\Users\kelly\AppData\Local\Temp\spl8.
+42FE cinit CODE >5121:C:\Users\kelly\AppData\Local\Temp\spl8.
+4300 cinit CODE >5122:C:\Users\kelly\AppData\Local\Temp\spl8.
+4300 cinit CODE >5123:C:\Users\kelly\AppData\Local\Temp\spl8.
+4302 cinit CODE >5124:C:\Users\kelly\AppData\Local\Temp\spl8.
+4304 cinit CODE >5125:C:\Users\kelly\AppData\Local\Temp\spl8.
+4306 cinit CODE >5128:C:\Users\kelly\AppData\Local\Temp\spl8.
+430A cinit CODE >5129:C:\Users\kelly\AppData\Local\Temp\spl8.
+430C cinit CODE >5130:C:\Users\kelly\AppData\Local\Temp\spl8.
+430C cinit CODE >5131:C:\Users\kelly\AppData\Local\Temp\spl8.
+430E cinit CODE >5132:C:\Users\kelly\AppData\Local\Temp\spl8.
+4310 cinit CODE >5133:C:\Users\kelly\AppData\Local\Temp\spl8.
+4312 cinit CODE >5138:C:\Users\kelly\AppData\Local\Temp\spl8.
+4314 cinit CODE >5139:C:\Users\kelly\AppData\Local\Temp\spl8.
+4316 cinit CODE >5140:C:\Users\kelly\AppData\Local\Temp\spl8.
+4318 cinit CODE >5141:C:\Users\kelly\AppData\Local\Temp\spl8.
+431A cinit CODE >5142:C:\Users\kelly\AppData\Local\Temp\spl8.
+431C cinit CODE >5143:C:\Users\kelly\AppData\Local\Temp\spl8.
+431E cinit CODE >5144:C:\Users\kelly\AppData\Local\Temp\spl8.
+4322 cinit CODE >5145:C:\Users\kelly\AppData\Local\Temp\spl8.
+4326 cinit CODE >5146:C:\Users\kelly\AppData\Local\Temp\spl8.
+4326 cinit CODE >5147:C:\Users\kelly\AppData\Local\Temp\spl8.
+4328 cinit CODE >5148:C:\Users\kelly\AppData\Local\Temp\spl8.
+432C cinit CODE >5149:C:\Users\kelly\AppData\Local\Temp\spl8.
+432E cinit CODE >5150:C:\Users\kelly\AppData\Local\Temp\spl8.
+4330 cinit CODE >5151:C:\Users\kelly\AppData\Local\Temp\spl8.
+4332 cinit CODE >5155:C:\Users\kelly\AppData\Local\Temp\spl8.
+4334 cinit CODE >5156:C:\Users\kelly\AppData\Local\Temp\spl8.
+4336 cinit CODE >5157:C:\Users\kelly\AppData\Local\Temp\spl8.
+4338 cinit CODE >5158:C:\Users\kelly\AppData\Local\Temp\spl8.
+433A cinit CODE >5159:C:\Users\kelly\AppData\Local\Temp\spl8.
+433C cinit CODE >5160:C:\Users\kelly\AppData\Local\Temp\spl8.
+433E cinit CODE >5161:C:\Users\kelly\AppData\Local\Temp\spl8.
+4342 cinit CODE >5162:C:\Users\kelly\AppData\Local\Temp\spl8.
+4346 cinit CODE >5163:C:\Users\kelly\AppData\Local\Temp\spl8.
+4346 cinit CODE >5164:C:\Users\kelly\AppData\Local\Temp\spl8.
+4348 cinit CODE >5165:C:\Users\kelly\AppData\Local\Temp\spl8.
+434C cinit CODE >5166:C:\Users\kelly\AppData\Local\Temp\spl8.
+434E cinit CODE >5167:C:\Users\kelly\AppData\Local\Temp\spl8.
+4350 cinit CODE >5168:C:\Users\kelly\AppData\Local\Temp\spl8.
+4352 cinit CODE >5174:C:\Users\kelly\AppData\Local\Temp\spl8.
+4352 cinit CODE >5176:C:\Users\kelly\AppData\Local\Temp\spl8.
+4354 cinit CODE >5177:C:\Users\kelly\AppData\Local\Temp\spl8.
+4356 cinit CODE >5178:C:\Users\kelly\AppData\Local\Temp\spl8.
+4358 cinit CODE >5179:C:\Users\kelly\AppData\Local\Temp\spl8.
 435C text72 CODE >35:D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
 435C text72 CODE >38:D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
 4360 text72 CODE >41:D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
@@ -2035,7 +2035,7 @@ ___ftdiv@exp 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.product
 __end_of_Do_Beep_Good 4BC4 0 CODE 0 text96 dist/default/production\lab_13.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\lab_13.X.production.obj
 _Do_Save_New_Time 4CA6 0 CODE 0 text29 dist/default/production\lab_13.X.production.obj
-__mediumconst FBC0 0 MEDIUMCONST 0 mediumconst C:\Users\kelly\AppData\Local\Temp\slo8.obj
+__mediumconst FBC0 0 MEDIUMCONST 0 mediumconst C:\Users\kelly\AppData\Local\Temp\spl8.obj
 __end_of_DS3231_Read_Time 42FA 0 CODE 0 text42 dist/default/production\lab_13.X.production.obj
 ___awtoft@sign 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 get_RPM@RPS 21 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
@@ -2057,7 +2057,7 @@ __size_of_DS3231_Read_Time 0 0 ABS 0 - dist/default/production\lab_13.X.producti
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\lab_13.X.production.obj
 _RBPU 7F8F 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 _TRMT 7D61 0 ABS 0 - dist/default/production\lab_13.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\kelly\AppData\Local\Temp\slo8.obj
+___sp 0 0 STACK 2 stack C:\Users\kelly\AppData\Local\Temp\spl8.obj
 _font FBC1 0 MEDIUMCONST 0 mediumconst dist/default/production\lab_13.X.production.obj
 _hour 65 0 COMRAM 1 bssCOMRAM dist/default/production\lab_13.X.production.obj
 _main 1ACA 0 CODE 0 text0 dist/default/production\lab_13.X.production.obj
@@ -2068,7 +2068,7 @@ __size_of_I2C_Start 0 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 __size_of_I2C_Write 0 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 ___ftadd@f1 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 ___ftadd@f2 50 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
-start 18 0 CODE 0 init C:\Users\kelly\AppData\Local\Temp\slo8.obj
+start 18 0 CODE 0 init C:\Users\kelly\AppData\Local\Temp\spl8.obj
 __end_of_Set_D1_RGB 45FE 0 CODE 0 text16 dist/default/production\lab_13.X.production.obj
 __end_of_Set_D2_RGB 4518 0 CODE 0 text15 dist/default/production\lab_13.X.production.obj
 Set_D2_RGB@rpm 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
@@ -2133,11 +2133,11 @@ _i2cLowScl 4DEC 0 CODE 0 text91 dist/default/production\lab_13.X.production.obj
 _i2cLowSda 4DD8 0 CODE 0 text90 dist/default/production\lab_13.X.production.obj
 I2C_Write@n 12 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 _Turn_Off_Fan 4B8C 0 CODE 0 text61 dist/default/production\lab_13.X.production.obj
-__accesstop 80 0 ABS 0 - C:\Users\kelly\AppData\Local\Temp\slo8.obj
-intlevel0 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\slo8.obj
-intlevel1 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\slo8.obj
-intlevel2 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\slo8.obj
-intlevel3 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\slo8.obj
+__accesstop 80 0 ABS 0 - C:\Users\kelly\AppData\Local\Temp\spl8.obj
+intlevel0 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\spl8.obj
+intlevel1 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\spl8.obj
+intlevel2 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\spl8.obj
+intlevel3 0 0 CODE 0 text C:\Users\kelly\AppData\Local\Temp\spl8.obj
 __ptext100 49F8 0 CODE 0 text100 dist/default/production\lab_13.X.production.obj
 __ptext101 4BE0 0 CODE 0 text101 dist/default/production\lab_13.X.production.obj
 __ptext102 39BE 0 CODE 0 text102 dist/default/production\lab_13.X.production.obj
@@ -2198,9 +2198,9 @@ _scale$2977 46 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.producti
 Update_Setup_Screen_Cursor_Forward@xinc 30 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 Update_Setup_Screen_Cursor_Forward@yinc 2F 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 ___awdiv@dividend 17 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\kelly\AppData\Local\Temp\slo8.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\kelly\AppData\Local\Temp\spl8.obj
 printf@width A6 0 BANK0 1 cstackBANK0 dist/default/production\lab_13.X.production.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\kelly\AppData\Local\Temp\slo8.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\kelly\AppData\Local\Temp\spl8.obj
 __end_of_Do_Save_New_Time 4CBA 0 CODE 0 text29 dist/default/production\lab_13.X.production.obj
 __size_of___awtoft 0 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 I2C_Init@c 11 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
@@ -2421,7 +2421,7 @@ __Hbank15 0 0 ABS 0 bank15 dist/default/production\lab_13.X.production.obj
 __end_of_Toggle_Fan 4C7C 0 CODE 0 text2 dist/default/production\lab_13.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\lab_13.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\lab_13.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\kelly\AppData\Local\Temp\slo8.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\kelly\AppData\Local\Temp\spl8.obj
 DS1621_Init@Device 16 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 __size_of_Exit_Time_Setup 0 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 ___lbtoft 4A1E 0 CODE 0 text103 dist/default/production\lab_13.X.production.obj
@@ -2861,8 +2861,8 @@ __end_of_Rcmd2red 470C 0 CODE 0 text36 dist/default/production\lab_13.X.producti
 __size_of_get_full_ADC 0 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 __size_of_Go_Prev_Field 0 0 ABS 0 - dist/default/production\lab_13.X.production.obj
 _In_Fan_Temp_Setup C7 0 BANK0 1 bssBANK0 dist/default/production\lab_13.X.production.obj
-stackhi F7F 0 ABS 0 - C:\Users\kelly\AppData\Local\Temp\slo8.obj
-stacklo 1A3 0 ABS 0 - C:\Users\kelly\AppData\Local\Temp\slo8.obj
+stackhi F7F 0 ABS 0 - C:\Users\kelly\AppData\Local\Temp\spl8.obj
+stacklo 1A3 0 ABS 0 - C:\Users\kelly\AppData\Local\Temp\spl8.obj
 ?___lbtoft 19 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\lab_13.X.production.obj
 _Initialize_Setup_Time_Screen 2D80 0 CODE 0 text22 dist/default/production\lab_13.X.production.obj
@@ -3062,7 +3062,7 @@ __Ltext97 0 0 ABS 0 text97 dist/default/production\lab_13.X.production.obj
 __Ltext98 0 0 ABS 0 text98 dist/default/production\lab_13.X.production.obj
 __Ltext99 0 0 ABS 0 text99 dist/default/production\lab_13.X.production.obj
 _Do_Change_Fan_Timer_Mode_Minus 4928 0 CODE 0 text95 dist/default/production\lab_13.X.production.obj
-__ramtop 1000 0 RAM 0 ramtop C:\Users\kelly\AppData\Local\Temp\slo8.obj
+__ramtop 1000 0 RAM 0 ramtop C:\Users\kelly\AppData\Local\Temp\spl8.obj
 check_for_button_input@F4236 123 0 BANK1 1 dataBANK1 dist/default/production\lab_13.X.production.obj
 drawtext@size 40 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
 putch@c 11 0 COMRAM 1 cstackCOMRAM dist/default/production\lab_13.X.production.obj
