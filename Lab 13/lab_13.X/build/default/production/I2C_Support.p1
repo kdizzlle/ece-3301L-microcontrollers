@@ -3773,8 +3773,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "22
 [v _Device `uc ~T0 @X0 1 a ]
-[; ;I2C_Support.c: 22: char Device = 0x68;
-[e = _Device -> -> 104 `i `uc ]
+[; ;I2C_Support.c: 22: char Device = 0x48;
+[e = _Device -> -> 72 `i `uc ]
 [; ;I2C_Support.c: 23: I2C_Write_Cmd_Write_Data(Device, 0xAC, 0x02);
 "23
 [e ( _I2C_Write_Cmd_Write_Data (3 , , _Device -> -> 172 `i `uc -> -> 2 `i `uc ]
@@ -3795,8 +3795,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "30
 [v _Device `uc ~T0 @X0 1 a ]
-[; ;I2C_Support.c: 30: char Device = 0x68;
-[e = _Device -> -> 104 `i `uc ]
+[; ;I2C_Support.c: 30: char Device = 0x48;
+[e = _Device -> -> 72 `i `uc ]
 "31
 [v _Cmd `uc ~T0 @X0 1 a ]
 [; ;I2C_Support.c: 31: char Cmd = 0xAA;

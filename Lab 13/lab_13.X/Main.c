@@ -89,8 +89,8 @@ void Do_Init()                      // Initialize the ports
     Init_ADC();
     OSCCON=0x70;                    // Set oscillator to 8 MHz 
     
-    ADCON1= 0x0E;
-    TRISA = 0x01;
+    ADCON1= 0x0F;
+    TRISA = 0x03;
     TRISB = 0x07;
     TRISC = 0x01;
     TRISD = 0x00;
@@ -143,6 +143,7 @@ void main()
             printf (" Temp = %d C = %d F ", tempC, tempF);
             printf ("Light Sensor = %f V", volt);
             printf (" RPM = %d  dc = %d ls = %d\r\n", rpm, duty_cycle, light_flag);
+            
             Monitor_Fan();
 
             Update_Screen();
@@ -153,8 +154,8 @@ void main()
         // Task #1
         // The function 'check_for_button_input()' is provided to check if a remote button has been pressed. Write a conditional if statement to check when that mentioned function
         // returns a 1 and the variable 'SYSTEM_ON' is 1, then do the following check:
-        KEY_PRESSED = check_for_button_input();
-        if (KEY_PRESSED==1 && SYSTEM_ON == 1)
+        
+        if (check_for_button_input()==1 && SYSTEM_ON == 1)
         {
             // first printout using printf the value of 'found'
                 printf("Key Location = %d \r\n\n", found);
@@ -200,6 +201,7 @@ void main()
                         break;
         //	 case EQ: check if FANMODE is on. If so, change it to 0 else change it to 1. In other words, toggle FANMODE;
                     case EQ:
+                        Do_Beep_Good();
                         if (FANMODE == 1)
                             FANMODE = 0;
                         else

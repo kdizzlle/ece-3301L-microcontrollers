@@ -106,8 +106,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S299 . . . . . . ]
 "5546
 [v _T1CONbits `VS299 ~T0 @X0 0 e@4045 ]
-"16 Interrupt.c
-[v _INT2_flag `uc ~T0 @X0 0 e ]
+"5511
+[v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
+"49
+[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
+"13 Interrupt.c
+[v _Nec_Button `uc ~T0 @X0 0 e ]
+"10
+[v _Nec_ok `s ~T0 @X0 0 e ]
 "15
 [v _INT1_flag `uc ~T0 @X0 0 e ]
 "14
@@ -3962,63 +3968,365 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Interrupt.c: 65: {
 [e :U _INT2_isr ]
 [f ]
-[; ;Interrupt.c: 67: INTCON3bits.INT2IF=0;
-"67
-[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 68: INT2_flag = 1;
-"68
-[e = _INT2_flag -> -> 1 `i `uc ]
-[; ;Interrupt.c: 69: }
+[; ;Interrupt.c: 69: INTCON3bits.INT2IF = 0;
 "69
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 70: if (Nec_state != 0)
+"70
+[e $ ! != -> _Nec_state `i -> 0 `i 401  ]
+[; ;Interrupt.c: 71: {
+"71
+{
+[; ;Interrupt.c: 72: Time_Elapsed = (TMR1H << 8) | TMR1L;
+"72
+[e = _Time_Elapsed -> | << -> _TMR1H `i -> 8 `i -> _TMR1L `i `ui ]
+[; ;Interrupt.c: 73: TMR1H = 0;
+"73
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;Interrupt.c: 74: TMR1L = 0;
+"74
+[e = _TMR1L -> -> 0 `i `uc ]
+"75
+}
+[e :U 401 ]
+[; ;Interrupt.c: 75: }
+[; ;Interrupt.c: 77: switch(Nec_state)
+"77
+[e $U 403  ]
+[; ;Interrupt.c: 78: {
+"78
+{
+[; ;Interrupt.c: 79: case 0 :
+"79
+[e :U 404 ]
+[; ;Interrupt.c: 80: {
+"80
+{
+[; ;Interrupt.c: 83: TMR1H = 0;
+"83
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;Interrupt.c: 84: TMR1L = 0;
+"84
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;Interrupt.c: 85: PIR1bits.TMR1IF = 0;
+"85
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 86: T1CON = 0x90;
+"86
+[e = _T1CON -> -> 144 `i `uc ]
+[; ;Interrupt.c: 87: T1CONbits.TMR1ON = 1;
+"87
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 88: bit_count = 0;
+"88
+[e = _bit_count -> -> 0 `i `uc ]
+[; ;Interrupt.c: 89: Nec_code = 0;
+"89
+[e = _Nec_code -> -> -> 0 `i `l `ul ]
+[; ;Interrupt.c: 90: Nec_state = 1;
+"90
+[e = _Nec_state -> -> 1 `i `uc ]
+[; ;Interrupt.c: 91: INTCON2bits.INTEDG2 = 1;
+"91
+[e = . . _INTCON2bits 1 4 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 92: PORTA = Nec_state;
+"92
+[e = _PORTA _Nec_state ]
+[; ;Interrupt.c: 94: return;
+"94
+[e $UE 400  ]
+"95
+}
+[; ;Interrupt.c: 95: }
+[; ;Interrupt.c: 97: case 1 :
+"97
+[e :U 405 ]
+[; ;Interrupt.c: 98: {
+"98
+{
+[; ;Interrupt.c: 101: if(Time_Elapsed > 8500 && Time_Elapsed < 9500)
+"101
+[e $ ! && > _Time_Elapsed -> -> 8500 `i `ui < _Time_Elapsed -> -> 9500 `i `ui 406  ]
+[; ;Interrupt.c: 102: {
+"102
+{
+[; ;Interrupt.c: 104: Nec_state = 2;
+"104
+[e = _Nec_state -> -> 2 `i `uc ]
+[; ;Interrupt.c: 105: PORTA = Nec_state;
+"105
+[e = _PORTA _Nec_state ]
+"107
+}
+[; ;Interrupt.c: 107: }
+[e $U 407  ]
+"109
+[e :U 406 ]
+[; ;Interrupt.c: 109: else
+[; ;Interrupt.c: 110: {
+"110
+{
+[; ;Interrupt.c: 112: force_nec_state0();
+"112
+[e ( _force_nec_state0 ..  ]
+"114
+}
+[e :U 407 ]
+[; ;Interrupt.c: 114: }
+[; ;Interrupt.c: 115: INTCON2bits.INTEDG2 = 0;
+"115
+[e = . . _INTCON2bits 1 4 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 116: return;
+"116
+[e $UE 400  ]
+"117
+}
+[; ;Interrupt.c: 117: }
+[; ;Interrupt.c: 119: case 2 :
+"119
+[e :U 408 ]
+[; ;Interrupt.c: 120: {
+"120
+{
+[; ;Interrupt.c: 122: if(Time_Elapsed > 4000 && Time_Elapsed < 5000)
+"122
+[e $ ! && > _Time_Elapsed -> -> 4000 `i `ui < _Time_Elapsed -> -> 5000 `i `ui 409  ]
+[; ;Interrupt.c: 123: {
+"123
+{
+[; ;Interrupt.c: 124: Nec_state = 3;
+"124
+[e = _Nec_state -> -> 3 `i `uc ]
+[; ;Interrupt.c: 125: PORTA = Nec_state;
+"125
+[e = _PORTA _Nec_state ]
+"127
+}
+[; ;Interrupt.c: 127: }
+[e $U 410  ]
+"128
+[e :U 409 ]
+[; ;Interrupt.c: 128: else
+[; ;Interrupt.c: 129: {
+"129
+{
+[; ;Interrupt.c: 131: force_nec_state0();
+"131
+[e ( _force_nec_state0 ..  ]
+"133
+}
+[e :U 410 ]
+[; ;Interrupt.c: 133: }
+[; ;Interrupt.c: 134: INTCON2bits.INTEDG2 = 1;
+"134
+[e = . . _INTCON2bits 1 4 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 135: return;
+"135
+[e $UE 400  ]
+"136
+}
+[; ;Interrupt.c: 136: }
+[; ;Interrupt.c: 138: case 3 :
+"138
+[e :U 411 ]
+[; ;Interrupt.c: 139: {
+"139
+{
+[; ;Interrupt.c: 141: if(Time_Elapsed > 400 && Time_Elapsed < 700)
+"141
+[e $ ! && > _Time_Elapsed -> -> 400 `i `ui < _Time_Elapsed -> -> 700 `i `ui 412  ]
+[; ;Interrupt.c: 142: {
+"142
+{
+[; ;Interrupt.c: 143: Nec_state = 4;
+"143
+[e = _Nec_state -> -> 4 `i `uc ]
+[; ;Interrupt.c: 144: PORTA = Nec_state;
+"144
+[e = _PORTA _Nec_state ]
+"146
+}
+[; ;Interrupt.c: 146: }
+[e $U 413  ]
+"147
+[e :U 412 ]
+[; ;Interrupt.c: 147: else
+[; ;Interrupt.c: 148: {
+"148
+{
+[; ;Interrupt.c: 150: force_nec_state0();
+"150
+[e ( _force_nec_state0 ..  ]
+"152
+}
+[e :U 413 ]
+[; ;Interrupt.c: 152: }
+[; ;Interrupt.c: 153: INTCON2bits.INTEDG2 = 0;
+"153
+[e = . . _INTCON2bits 1 4 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 154: return;
+"154
+[e $UE 400  ]
+"155
+}
+[; ;Interrupt.c: 155: }
+[; ;Interrupt.c: 157: case 4 :
+"157
+[e :U 414 ]
+[; ;Interrupt.c: 158: {
+"158
+{
+[; ;Interrupt.c: 160: if(Time_Elapsed > 400 && Time_Elapsed < 1800)
+"160
+[e $ ! && > _Time_Elapsed -> -> 400 `i `ui < _Time_Elapsed -> -> 1800 `i `ui 415  ]
+[; ;Interrupt.c: 161: {
+"161
+{
+[; ;Interrupt.c: 162: Nec_code = Nec_code << 1;
+"162
+[e = _Nec_code << _Nec_code -> 1 `i ]
+[; ;Interrupt.c: 163: if (Time_Elapsed > 1000)
+"163
+[e $ ! > _Time_Elapsed -> -> 1000 `i `ui 416  ]
+[; ;Interrupt.c: 164: Nec_code++;
+"164
+[e ++ _Nec_code -> -> -> 1 `i `l `ul ]
+[e :U 416 ]
+[; ;Interrupt.c: 165: bit_count++;
+"165
+[e ++ _bit_count -> -> 1 `i `uc ]
+[; ;Interrupt.c: 166: if(bit_count > 31)
+"166
+[e $ ! > -> _bit_count `i -> 31 `i 417  ]
+[; ;Interrupt.c: 167: {
+"167
+{
+[; ;Interrupt.c: 168: Nec_Button = Nec_code >> 8;
+"168
+[e = _Nec_Button -> >> _Nec_code -> 8 `i `uc ]
+[; ;Interrupt.c: 169: Nec_state = 0;
+"169
+[e = _Nec_state -> -> 0 `i `uc ]
+[; ;Interrupt.c: 170: PORTA = Nec_state;
+"170
+[e = _PORTA _Nec_state ]
+[; ;Interrupt.c: 172: Nec_ok = 1;
+"172
+[e = _Nec_ok -> -> 1 `i `s ]
+[; ;Interrupt.c: 174: INTCON3bits.INT2IE = 0;
+"174
+[e = . . _INTCON3bits 0 4 -> -> 0 `i `uc ]
+"175
+}
+[; ;Interrupt.c: 175: }
+[e $U 418  ]
+"176
+[e :U 417 ]
+[; ;Interrupt.c: 176: else
+[; ;Interrupt.c: 177: {
+"177
+{
+[; ;Interrupt.c: 178: Nec_state = 3;
+"178
+[e = _Nec_state -> -> 3 `i `uc ]
+[; ;Interrupt.c: 179: PORTA = Nec_state;
+"179
+[e = _PORTA _Nec_state ]
+"181
+}
+[e :U 418 ]
+"182
+}
+[; ;Interrupt.c: 181: }
+[; ;Interrupt.c: 182: }
+[e $U 419  ]
+"184
+[e :U 415 ]
+[; ;Interrupt.c: 184: else
+[; ;Interrupt.c: 185: {
+"185
+{
+[; ;Interrupt.c: 187: force_nec_state0();
+"187
+[e ( _force_nec_state0 ..  ]
+"189
+}
+[e :U 419 ]
+[; ;Interrupt.c: 189: }
+[; ;Interrupt.c: 190: INTCON2bits.INTEDG2 = 1;
+"190
+[e = . . _INTCON2bits 1 4 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 191: return;
+"191
+[e $UE 400  ]
+"192
+}
+"193
+}
+[; ;Interrupt.c: 192: }
+[; ;Interrupt.c: 193: }
+[e $U 402  ]
+"77
+[e :U 403 ]
+[e [\ _Nec_state , $ -> -> 0 `i `uc 404
+ , $ -> -> 1 `i `uc 405
+ , $ -> -> 2 `i `uc 408
+ , $ -> -> 3 `i `uc 411
+ , $ -> -> 4 `i `uc 414
+ 402 ]
+"193
+[e :U 402 ]
+[; ;Interrupt.c: 194: }
+"194
 [e :UE 400 ]
 }
-"71
+"196
 [v _INT1_isr `(v ~T0 @X0 1 ef ]
-"72
+"197
 {
-[; ;Interrupt.c: 71: void INT1_isr()
-[; ;Interrupt.c: 72: {
+[; ;Interrupt.c: 196: void INT1_isr()
+[; ;Interrupt.c: 197: {
 [e :U _INT1_isr ]
 [f ]
-[; ;Interrupt.c: 73: INTCON3bits.INT1IF == 0;
-"73
+[; ;Interrupt.c: 198: INTCON3bits.INT1IF == 0;
+"198
 [e == -> . . _INTCON3bits 0 0 `i -> 0 `i ]
-[; ;Interrupt.c: 74: INT1_flag = 1;
-"74
+[; ;Interrupt.c: 199: INT1_flag = 1;
+"199
 [e = _INT1_flag -> -> 1 `i `uc ]
-[; ;Interrupt.c: 76: }
-"76
-[e :UE 401 ]
+[; ;Interrupt.c: 201: }
+"201
+[e :UE 420 ]
 }
-"78
+"203
 [v _INT0_isr `(v ~T0 @X0 1 ef ]
-"79
+"204
 {
-[; ;Interrupt.c: 78: void INT0_isr()
-[; ;Interrupt.c: 79: {
+[; ;Interrupt.c: 203: void INT0_isr()
+[; ;Interrupt.c: 204: {
 [e :U _INT0_isr ]
 [f ]
-"80
+"205
 [v _k `i ~T0 @X0 1 a ]
-[; ;Interrupt.c: 80: int k;
-[; ;Interrupt.c: 81: for (k=0; k<20000;k++);
-"81
+[; ;Interrupt.c: 205: int k;
+[; ;Interrupt.c: 206: for (k=0; k<20000;k++);
+"206
 {
 [e = _k -> 0 `i ]
-[e $ < _k -> 20000 `i 403  ]
-[e $U 404  ]
-[e :U 403 ]
+[e $ < _k -> 20000 `i 422  ]
+[e $U 423  ]
+[e :U 422 ]
 [e ++ _k -> 1 `i ]
-[e $ < _k -> 20000 `i 403  ]
-[e :U 404 ]
+[e $ < _k -> 20000 `i 422  ]
+[e :U 423 ]
 }
-[; ;Interrupt.c: 82: INTCONbits.INT0IF = 0;
-"82
+[; ;Interrupt.c: 207: INTCONbits.INT0IF = 0;
+"207
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 83: INT0_flag = 1;
-"83
+[; ;Interrupt.c: 208: INT0_flag = 1;
+"208
 [e = _INT0_flag -> -> 1 `i `uc ]
-[; ;Interrupt.c: 84: }
-"84
-[e :UE 402 ]
+[; ;Interrupt.c: 209: }
+"209
+[e :UE 421 ]
 }

@@ -5058,18 +5058,18 @@ void Turn_Off_Fan()
 {
 printf ("Fan is turned off\r\n");
 
-FAN = 1;
-PORTDbits.RD1 = 1;
-PORTDbits.RD2 = 1;
+FAN = 0;
+PORTDbits.RD1 = 0;
+PORTDbits.RD2 = 0;
 }
 
 void Turn_On_Fan()
 {
 printf ("Fan is turned on\r\n");
 
-FAN = 0;
-PORTDbits.RD1 = 0;
-PORTDbits.RD2 = 0;
+FAN = 1;
+PORTDbits.RD1 = 1;
+PORTDbits.RD2 = 1;
 do_update_pwm(duty_cycle);
 }
 

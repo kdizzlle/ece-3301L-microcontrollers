@@ -54,23 +54,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Monitor_Fan `(v ~T0 @X0 0 ef ]
 "3 Main_Screen.h
 [v _Update_Screen `(v ~T0 @X0 0 ef ]
-"540 D:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
-[s S29 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S29 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"550
-[s S30 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S30 . PSP0 PSP1 PSP2 PSP3 PSP4 PSP5 PSP6 PSP7 ]
-"560
-[s S31 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . . P1B P1C P1D ]
-"566
-[s S32 :7 `uc 1 :1 `uc 1 ]
-[n S32 . . SS2 ]
-"539
-[u S28 `S29 1 `S30 1 `S31 1 `S32 1 ]
-[n S28 . . . . . ]
-"571
-[v _PORTDbits `VS28 ~T0 @X0 0 e@3971 ]
 "1 utils.h
 [v _check_for_button_input `(uc ~T0 @X0 0 ef ]
 "5
@@ -4400,12 +4383,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 90: OSCCON=0x70;
 "90
 [e = _OSCCON -> -> 112 `i `uc ]
-[; ;Main.c: 92: ADCON1= 0x0E;
+[; ;Main.c: 92: ADCON1= 0x0F;
 "92
-[e = _ADCON1 -> -> 14 `i `uc ]
-[; ;Main.c: 93: TRISA = 0x01;
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;Main.c: 93: TRISA = 0x03;
 "93
-[e = _TRISA -> -> 1 `i `uc ]
+[e = _TRISA -> -> 3 `i `uc ]
 [; ;Main.c: 94: TRISB = 0x07;
 "94
 [e = _TRISB -> -> 7 `i `uc ]
@@ -4525,152 +4508,152 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 145: printf (" RPM = %d  dc = %d ls = %d\r\n", rpm, duty_cycle, light_flag);
 "145
 [e ( _printf , , , (. :s 4C _rpm -> _duty_cycle `i -> _light_flag `i ]
-[; ;Main.c: 146: Monitor_Fan();
-"146
+[; ;Main.c: 147: Monitor_Fan();
+"147
 [e ( _Monitor_Fan ..  ]
-[; ;Main.c: 148: Update_Screen();
-"148
-[e ( _Update_Screen ..  ]
+[; ;Main.c: 149: Update_Screen();
 "149
+[e ( _Update_Screen ..  ]
+"150
 }
 [e :U 401 ]
-[; ;Main.c: 149: }
-[; ;Main.c: 156: PORTDbits.RD3 = check_for_button_input();
-"156
-[e = . . _PORTDbits 0 3 ( _check_for_button_input ..  ]
-[; ;Main.c: 157: if (PORTDbits.RD3==1 && SYSTEM_ON == 1)
-"157
-[e $ ! && == -> . . _PORTDbits 0 3 `i -> 1 `i == -> _SYSTEM_ON `i -> 1 `i 403  ]
-[; ;Main.c: 158: {
+[; ;Main.c: 150: }
+[; ;Main.c: 158: if (check_for_button_input()==1 && SYSTEM_ON == 1)
 "158
+[e $ ! && == -> ( _check_for_button_input ..  `i -> 1 `i == -> _SYSTEM_ON `i -> 1 `i 403  ]
+[; ;Main.c: 159: {
+"159
 {
-[; ;Main.c: 160: printf("Key Location = %d \r\n\n", found);
-"160
+[; ;Main.c: 161: printf("Key Location = %d \r\n\n", found);
+"161
 [e ( _printf , (. :s 5C -> _found `i ]
-[; ;Main.c: 162: Nec_ok = 0;
-"162
+[; ;Main.c: 163: Nec_ok = 0;
+"163
 [e = _Nec_ok -> -> 0 `i `s ]
-[; ;Main.c: 164: switch(found)
-"164
-[e $U 405  ]
-[; ;Main.c: 165: {
+[; ;Main.c: 165: switch(found)
 "165
+[e $U 405  ]
+[; ;Main.c: 166: {
+"166
 {
-[; ;Main.c: 167: case 0:
-"167
-[e :U 406 ]
-[; ;Main.c: 168: Do_Beep_Good();
+[; ;Main.c: 168: case 0:
 "168
-[e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 169: Do_Setup_Time();
+[e :U 406 ]
+[; ;Main.c: 169: Do_Beep_Good();
 "169
-[e ( _Do_Setup_Time ..  ]
-[; ;Main.c: 170: break;
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 170: Do_Setup_Time();
 "170
+[e ( _Do_Setup_Time ..  ]
+[; ;Main.c: 171: break;
+"171
 [e $U 404  ]
-[; ;Main.c: 172: case 1:
-"172
-[e :U 407 ]
-[; ;Main.c: 173: Do_Beep_Good();
+[; ;Main.c: 173: case 1:
 "173
-[e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 174: Setup_Fan_Temp();
+[e :U 407 ]
+[; ;Main.c: 174: Do_Beep_Good();
 "174
-[e ( _Setup_Fan_Temp ..  ]
-[; ;Main.c: 175: break;
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 175: Setup_Fan_Temp();
 "175
+[e ( _Setup_Fan_Temp ..  ]
+[; ;Main.c: 176: break;
+"176
 [e $U 404  ]
-[; ;Main.c: 177: case 3:
-"177
-[e :U 408 ]
-[; ;Main.c: 178: Do_Beep_Good();
+[; ;Main.c: 178: case 3:
 "178
-[e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 179: Do_Change_Fan_Timer_Mode_Minus();
+[e :U 408 ]
+[; ;Main.c: 179: Do_Beep_Good();
 "179
-[e ( _Do_Change_Fan_Timer_Mode_Minus ..  ]
-[; ;Main.c: 180: break;
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 180: Do_Change_Fan_Timer_Mode_Minus();
 "180
+[e ( _Do_Change_Fan_Timer_Mode_Minus ..  ]
+[; ;Main.c: 181: break;
+"181
 [e $U 404  ]
-[; ;Main.c: 182: case 4:
-"182
-[e :U 409 ]
-[; ;Main.c: 183: Do_Beep_Good();
+[; ;Main.c: 183: case 4:
 "183
-[e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 184: Do_Change_Fan_Timer_Mode_Plus();
+[e :U 409 ]
+[; ;Main.c: 184: Do_Beep_Good();
 "184
-[e ( _Do_Change_Fan_Timer_Mode_Plus ..  ]
-[; ;Main.c: 185: break;
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 185: Do_Change_Fan_Timer_Mode_Plus();
 "185
+[e ( _Do_Change_Fan_Timer_Mode_Plus ..  ]
+[; ;Main.c: 186: break;
+"186
 [e $U 404  ]
-[; ;Main.c: 187: case 5:
-"187
-[e :U 410 ]
-[; ;Main.c: 188: Do_Beep_Good();
+[; ;Main.c: 188: case 5:
 "188
-[e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 189: Toggle_Fan();
+[e :U 410 ]
+[; ;Main.c: 189: Do_Beep_Good();
 "189
-[e ( _Toggle_Fan ..  ]
-[; ;Main.c: 190: break;
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 190: Toggle_Fan();
 "190
+[e ( _Toggle_Fan ..  ]
+[; ;Main.c: 191: break;
+"191
 [e $U 404  ]
-[; ;Main.c: 192: case 6:
-"192
-[e :U 411 ]
-[; ;Main.c: 193: Do_Beep_Good();
+[; ;Main.c: 193: case 6:
 "193
-[e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 194: Decrease_Duty_Cycle();
+[e :U 411 ]
+[; ;Main.c: 194: Do_Beep_Good();
 "194
-[e ( _Decrease_Duty_Cycle ..  ]
-[; ;Main.c: 195: break;
-"195
-[e $U 404  ]
-[; ;Main.c: 197: case 7:
-"197
-[e :U 412 ]
-[; ;Main.c: 198: Do_Beep_Good();
-"198
 [e ( _Do_Beep_Good ..  ]
-[; ;Main.c: 199: Increase_Duty_Cycle();
-"199
-[e ( _Increase_Duty_Cycle ..  ]
-[; ;Main.c: 200: break;
-"200
+[; ;Main.c: 195: Decrease_Duty_Cycle();
+"195
+[e ( _Decrease_Duty_Cycle ..  ]
+[; ;Main.c: 196: break;
+"196
 [e $U 404  ]
-[; ;Main.c: 202: case 8:
-"202
-[e :U 413 ]
-[; ;Main.c: 203: if (FANMODE == 1)
+[; ;Main.c: 198: case 7:
+"198
+[e :U 412 ]
+[; ;Main.c: 199: Do_Beep_Good();
+"199
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 200: Increase_Duty_Cycle();
+"200
+[e ( _Increase_Duty_Cycle ..  ]
+[; ;Main.c: 201: break;
+"201
+[e $U 404  ]
+[; ;Main.c: 203: case 8:
 "203
-[e $ ! == -> _FANMODE `i -> 1 `i 414  ]
-[; ;Main.c: 204: FANMODE = 0;
+[e :U 413 ]
+[; ;Main.c: 204: Do_Beep_Good();
 "204
+[e ( _Do_Beep_Good ..  ]
+[; ;Main.c: 205: if (FANMODE == 1)
+"205
+[e $ ! == -> _FANMODE `i -> 1 `i 414  ]
+[; ;Main.c: 206: FANMODE = 0;
+"206
 [e = _FANMODE -> -> 0 `i `uc ]
 [e $U 415  ]
-"205
+"207
 [e :U 414 ]
-[; ;Main.c: 205: else
-[; ;Main.c: 206: FANMODE = 1;
-"206
+[; ;Main.c: 207: else
+[; ;Main.c: 208: FANMODE = 1;
+"208
 [e = _FANMODE -> -> 1 `i `uc ]
 [e :U 415 ]
-[; ;Main.c: 207: break;
-"207
-[e $U 404  ]
-[; ;Main.c: 209: default:
+[; ;Main.c: 209: break;
 "209
-[e :U 416 ]
-[; ;Main.c: 210: Do_Beep_Bad();
-"210
-[e ( _Do_Beep_Bad ..  ]
-"211
-}
-[; ;Main.c: 211: }
 [e $U 404  ]
-"164
+[; ;Main.c: 211: default:
+"211
+[e :U 416 ]
+[; ;Main.c: 212: Do_Beep_Bad();
+"212
+[e ( _Do_Beep_Bad ..  ]
+"213
+}
+[; ;Main.c: 213: }
+[e $U 404  ]
+"165
 [e :U 405 ]
 [e [\ _found , $ -> -> 0 `i `uc 406
  , $ -> -> 1 `i `uc 407
@@ -4681,150 +4664,150 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 7 `i `uc 412
  , $ -> -> 8 `i `uc 413
  416 ]
-"211
+"213
 [e :U 404 ]
-"212
+"214
 }
 [e :U 403 ]
-[; ;Main.c: 212: }
-[; ;Main.c: 220: if (INT0_flag == 1 || light_flag == 1)
-"220
-[e $ ! || == -> _INT0_flag `i -> 1 `i == -> _light_flag `i -> 1 `i 417  ]
-[; ;Main.c: 221: {
-"221
-{
-[; ;Main.c: 222: INT0_flag = 0;
+[; ;Main.c: 214: }
+[; ;Main.c: 222: if (INT0_flag == 1 || light_flag == 1)
 "222
-[e = _INT0_flag -> -> 0 `i `uc ]
-[; ;Main.c: 223: light_flag = 0;
+[e $ ! || == -> _INT0_flag `i -> 1 `i == -> _light_flag `i -> 1 `i 417  ]
+[; ;Main.c: 223: {
 "223
-[e = _light_flag -> -> 0 `i `uc ]
-[; ;Main.c: 225: if (SYSTEM_ON == 1)
+{
+[; ;Main.c: 224: INT0_flag = 0;
+"224
+[e = _INT0_flag -> -> 0 `i `uc ]
+[; ;Main.c: 225: light_flag = 0;
 "225
-[e $ ! == -> _SYSTEM_ON `i -> 1 `i 418  ]
-[; ;Main.c: 226: {
-"226
-{
-[; ;Main.c: 227: printf ("The system will now turn off. \r\n\n");
+[e = _light_flag -> -> 0 `i `uc ]
+[; ;Main.c: 227: if (SYSTEM_ON == 1)
 "227
-[e ( _printf :s 6C ]
-[; ;Main.c: 228: SYSTEM_ON = 0;
+[e $ ! == -> _SYSTEM_ON `i -> 1 `i 418  ]
+[; ;Main.c: 228: {
 "228
-[e = _SYSTEM_ON -> -> 0 `i `uc ]
-[; ;Main.c: 229: Turn_Off_Fan();
-"229
-[e ( _Turn_Off_Fan ..  ]
-[; ;Main.c: 230: FAN_TIMER_MODE = 0;
-"230
-[e = _FAN_TIMER_MODE -> -> 0 `i `uc ]
-[; ;Main.c: 231: FAN_TIMER_TIME = 0;
-"231
-[e = _FAN_TIMER_TIME -> -> 0 `i `uc ]
-[; ;Main.c: 232: printf ("The system is now OFF. \r\n\n");
-"232
-[e ( _printf :s 7C ]
-[; ;Main.c: 233: Initialize_Screen();
-"233
-[e ( _Initialize_Screen ..  ]
-"234
-}
-[; ;Main.c: 234: }
-[e $U 419  ]
-"235
-[e :U 418 ]
-[; ;Main.c: 235: else if (SYSTEM_ON == 0)
-[e $ ! == -> _SYSTEM_ON `i -> 0 `i 420  ]
-[; ;Main.c: 236: {
-"236
 {
-[; ;Main.c: 237: printf ("The system will now turn on. \r\n\n");
-"237
-[e ( _printf :s 8C ]
-[; ;Main.c: 238: SYSTEM_ON = 1;
-"238
-[e = _SYSTEM_ON -> -> 1 `i `uc ]
-[; ;Main.c: 239: Initialize_Screen();
-"239
+[; ;Main.c: 229: printf ("The system will now turn off. \r\n\n");
+"229
+[e ( _printf :s 6C ]
+[; ;Main.c: 230: SYSTEM_ON = 0;
+"230
+[e = _SYSTEM_ON -> -> 0 `i `uc ]
+[; ;Main.c: 231: Turn_Off_Fan();
+"231
+[e ( _Turn_Off_Fan ..  ]
+[; ;Main.c: 232: FAN_TIMER_MODE = 0;
+"232
+[e = _FAN_TIMER_MODE -> -> 0 `i `uc ]
+[; ;Main.c: 233: FAN_TIMER_TIME = 0;
+"233
+[e = _FAN_TIMER_TIME -> -> 0 `i `uc ]
+[; ;Main.c: 234: printf ("The system is now OFF. \r\n\n");
+"234
+[e ( _printf :s 7C ]
+[; ;Main.c: 235: Initialize_Screen();
+"235
 [e ( _Initialize_Screen ..  ]
+"236
+}
+[; ;Main.c: 236: }
+[e $U 419  ]
+"237
+[e :U 418 ]
+[; ;Main.c: 237: else if (SYSTEM_ON == 0)
+[e $ ! == -> _SYSTEM_ON `i -> 0 `i 420  ]
+[; ;Main.c: 238: {
+"238
+{
+[; ;Main.c: 239: printf ("The system will now turn on. \r\n\n");
+"239
+[e ( _printf :s 8C ]
+[; ;Main.c: 240: SYSTEM_ON = 1;
 "240
+[e = _SYSTEM_ON -> -> 1 `i `uc ]
+[; ;Main.c: 241: Initialize_Screen();
+"241
+[e ( _Initialize_Screen ..  ]
+"242
 }
 [e :U 420 ]
-"241
+"243
 [e :U 419 ]
 }
 [e :U 417 ]
-"242
+"244
 }
 [e :U 398 ]
 "125
 [e $U 399  ]
 [e :U 400 ]
-[; ;Main.c: 240: }
-[; ;Main.c: 241: }
 [; ;Main.c: 242: }
 [; ;Main.c: 243: }
-"243
+[; ;Main.c: 244: }
+[; ;Main.c: 245: }
+"245
 [e :UE 397 ]
 }
-"246
+"248
 [v _Set_D1_RGB `(v ~T0 @X0 1 ef1`uc ]
-"247
+"249
 {
-[; ;Main.c: 246: void Set_D1_RGB(char duty_cycle)
-[; ;Main.c: 247: {
+[; ;Main.c: 248: void Set_D1_RGB(char duty_cycle)
+[; ;Main.c: 249: {
 [e :U _Set_D1_RGB ]
 [v _duty_cycle `uc ~T0 @X0 1 r1 ]
 [f ]
-"249
-[v _range `i ~T0 @X0 1 a ]
-[; ;Main.c: 249: int range = duty_cycle/10;
-[e = _range / -> _duty_cycle `i -> 10 `i ]
-[; ;Main.c: 250: if (range > 7)
-"250
-[e $ ! > _range -> 7 `i 422  ]
-[; ;Main.c: 251: range = 7;
 "251
+[v _range `i ~T0 @X0 1 a ]
+[; ;Main.c: 251: int range = duty_cycle/10;
+[e = _range / -> _duty_cycle `i -> 10 `i ]
+[; ;Main.c: 252: if (range > 7)
+"252
+[e $ ! > _range -> 7 `i 422  ]
+[; ;Main.c: 253: range = 7;
+"253
 [e = _range -> 7 `i ]
 [e :U 422 ]
-[; ;Main.c: 252: PORTD = (PORTD & 0x8F) | (range<<4);
-"252
+[; ;Main.c: 254: PORTD = (PORTD & 0x8F) | (range<<4);
+"254
 [e = _PORTD -> | & -> _PORTD `i -> 143 `i << _range -> 4 `i `uc ]
-[; ;Main.c: 253: }
-"253
+[; ;Main.c: 255: }
+"255
 [e :UE 421 ]
 }
-"255
+"257
 [v _Set_D2_RGB `(v ~T0 @X0 1 ef1`i ]
-"256
+"258
 {
-[; ;Main.c: 255: void Set_D2_RGB(int rpm)
-[; ;Main.c: 256: {
+[; ;Main.c: 257: void Set_D2_RGB(int rpm)
+[; ;Main.c: 258: {
 [e :U _Set_D2_RGB ]
 [v _rpm `i ~T0 @X0 1 r1 ]
 [f ]
-"258
-[v _range `i ~T0 @X0 1 a ]
-[; ;Main.c: 258: int range = (rpm/500)+1;
-[e = _range + / _rpm -> 500 `i -> 1 `i ]
-[; ;Main.c: 259: if (range > 7)
-"259
-[e $ ! > _range -> 7 `i 424  ]
-[; ;Main.c: 260: range = 7;
 "260
+[v _range `i ~T0 @X0 1 a ]
+[; ;Main.c: 260: int range = (rpm/500)+1;
+[e = _range + / _rpm -> 500 `i -> 1 `i ]
+[; ;Main.c: 261: if (range > 7)
+"261
+[e $ ! > _range -> 7 `i 424  ]
+[; ;Main.c: 262: range = 7;
+"262
 [e = _range -> 7 `i ]
 [e :U 424 ]
-[; ;Main.c: 261: if (rpm == 0)
-"261
+[; ;Main.c: 263: if (rpm == 0)
+"263
 [e $ ! == _rpm -> 0 `i 425  ]
-[; ;Main.c: 262: range = 0;
-"262
+[; ;Main.c: 264: range = 0;
+"264
 [e = _range -> 0 `i ]
 [e :U 425 ]
-[; ;Main.c: 263: PORTE = range;
-"263
+[; ;Main.c: 265: PORTE = range;
+"265
 [e = _PORTE -> _range `uc ]
-[; ;Main.c: 264: }
-"264
+[; ;Main.c: 266: }
+"266
 [e :UE 423 ]
 }
 [p f _printf 12624004 ]

@@ -136,19 +136,21 @@ TRUE 1
 [v _chkisr chkisr `IIH(v  1 e 0 0 ]
 "49
 [v _TIMER1_isr TIMER1_isr `(v  1 e 0 0 ]
+"57
+[v _force_nec_state0 force_nec_state0 `(v  1 e 0 0 ]
 "64
 [v _INT2_isr INT2_isr `(v  1 e 0 0 ]
-"71
+"196
 [v _INT1_isr INT1_isr `(v  1 e 0 0 ]
-"78
+"203
 [v _INT0_isr INT0_isr `(v  1 e 0 0 ]
 "86 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
 [v _Do_Init Do_Init `(v  1 e 0 0 ]
 "113
 [v _main main `(v  1 e 0 0 ]
-"246
+"248
 [v _Set_D1_RGB Set_D1_RGB `(v  1 e 0 0 ]
-"255
+"257
 [v _Set_D2_RGB Set_D2_RGB `(v  1 e 0 0 ]
 "41 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main_Screen.c
 [v _Initialize_Screen Initialize_Screen `(v  1 e 0 0 ]
@@ -262,6 +264,8 @@ TRUE 1
 [v _Init_UART Init_UART `(v  1 e 0 0 ]
 "190
 [v _putch putch `(v  1 e 0 0 ]
+"49 D:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 [s S152 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -271,7 +275,7 @@ TRUE 1
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"228 D:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+"228
 [s S161 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
@@ -384,7 +388,7 @@ TRUE 1
 [v _TRISBbits TRISBbits `VES252  1 e 1 @3987 ]
 "2075
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S2279 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S2251 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -394,8 +398,8 @@ TRUE 1
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "2107
-[u S2297 . 1 `S2279 1 . 1 0 `S657 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES2297  1 e 1 @3988 ]
+[u S2269 . 1 `S2251 1 . 1 0 `S657 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES2269  1 e 1 @3988 ]
 "2296
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2517
@@ -438,7 +442,7 @@ TRUE 1
 [v _PIR1bits PIR1bits `VES476  1 e 1 @3998 ]
 "3265
 [v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
-[s S2183 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S2155 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -448,25 +452,25 @@ TRUE 1
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3306
-[s S2192 . 1 `uc 1 . 1 0 :3:0 
+[s S2164 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S2195 . 1 `uc 1 . 1 0 :5:0 
+[s S2167 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S2198 . 1 `uc 1 . 1 0 :6:0 
+[s S2170 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S2201 . 1 `uc 1 . 1 0 :6:0 
+[s S2173 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S2204 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S2176 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S2206 . 1 `S2183 1 . 1 0 `S2192 1 . 1 0 `S2195 1 . 1 0 `S2198 1 . 1 0 `S2201 1 . 1 0 `S2204 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES2206  1 e 1 @4011 ]
+[u S2178 . 1 `S2155 1 . 1 0 `S2164 1 . 1 0 `S2167 1 . 1 0 `S2170 1 . 1 0 `S2173 1 . 1 0 `S2176 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES2178  1 e 1 @4011 ]
 "3474
 [v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
-[s S2096 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S2068 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -476,36 +480,36 @@ TRUE 1
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3534
-[s S2105 . 1 `uc 1 . 1 0 :2:0 
+[s S2077 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 BRGH1 1 0 :1:2 
 ]
-[s S2108 . 1 `uc 1 . 1 0 :7:0 
+[s S2080 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S2111 . 1 `uc 1 . 1 0 :3:0 
+[s S2083 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SENDB1 1 0 :1:3 
 ]
-[s S2114 . 1 `uc 1 . 1 0 :4:0 
+[s S2086 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SYNC1 1 0 :1:4 
 ]
-[s S2117 . 1 `uc 1 . 1 0 :1:0 
+[s S2089 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 ]
-[s S2120 . 1 `uc 1 . 1 0 :6:0 
+[s S2092 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX91 1 0 :1:6 
 ]
-[s S2123 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S2095 . 1 `uc 1 TX9D1 1 0 :1:0 
 ]
-[s S2125 . 1 `uc 1 . 1 0 :5:0 
+[s S2097 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 TXEN1 1 0 :1:5 
 ]
-[s S2128 . 1 `uc 1 . 1 0 :6:0 
+[s S2100 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S2131 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S2103 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S2133 . 1 `S2096 1 . 1 0 `S2105 1 . 1 0 `S2108 1 . 1 0 `S2111 1 . 1 0 `S2114 1 . 1 0 `S2117 1 . 1 0 `S2120 1 . 1 0 `S2123 1 . 1 0 `S2125 1 . 1 0 `S2128 1 . 1 0 `S2131 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES2133  1 e 1 @4012 ]
+[u S2105 . 1 `S2068 1 . 1 0 `S2077 1 . 1 0 `S2080 1 . 1 0 `S2083 1 . 1 0 `S2086 1 . 1 0 `S2089 1 . 1 0 `S2092 1 . 1 0 `S2095 1 . 1 0 `S2097 1 . 1 0 `S2100 1 . 1 0 `S2103 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES2105  1 e 1 @4012 ]
 "3771
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "3793
@@ -643,6 +647,8 @@ TRUE 1
 [v _T2CON T2CON `VEuc  1 e 1 @4042 ]
 "5396
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"5511
+[v _T1CON T1CON `VEuc  1 e 1 @4045 ]
 [s S1507 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
@@ -793,6 +799,12 @@ TRUE 1
 [v __npowers_ _npowers_ `C[13]d  1 e 39 0 ]
 "14 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Fan_Support.c
 [v _Timer_Table Timer_Table `[4]uc  1 e 4 0 ]
+"6 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Interrupt.c
+[v _bit_count bit_count `uc  1 e 1 0 ]
+"7
+[v _Time_Elapsed Time_Elapsed `ui  1 e 2 0 ]
+"11
+[v _Nec_code Nec_code `ul  1 e 4 0 ]
 "29 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
 [v _second second `uc  1 e 1 0 ]
 "30
@@ -828,7 +840,6 @@ TRUE 1
 "44
 [v _volt volt `f  1 e 3 0 ]
 "45
-[v _INT2_flag INT2_flag `uc  1 e 1 0 ]
 [v _INT1_flag INT1_flag `uc  1 e 1 0 ]
 [v _INT0_flag INT0_flag `uc  1 e 1 0 ]
 "46
@@ -906,7 +917,7 @@ TRUE 1
 "113 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"243
+"245
 } 0
 "100 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main_Screen.c
 [v _Update_Screen Update_Screen `(v  1 e 0 0 ]
@@ -1003,27 +1014,27 @@ TRUE 1
 [v bcd_2_dec@bcd bcd `uc  1 a 1 20 ]
 "57
 } 0
-"255 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
+"257 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
 [v _Set_D2_RGB Set_D2_RGB `(v  1 e 0 0 ]
 {
-"258
+"260
 [v Set_D2_RGB@range range `i  1 a 2 32 ]
-"256
+"258
 [v Set_D2_RGB@rpm rpm `i  1 p 2 30 ]
-"264
+"266
 } 0
-"246
+"248
 [v _Set_D1_RGB Set_D1_RGB `(v  1 e 0 0 ]
 {
-"247
-[v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 wreg ]
 "249
+[v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 wreg ]
+"251
 [v Set_D1_RGB@range range `i  1 a 2 32 ]
-"247
-[v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 wreg ]
 "249
+[v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 wreg ]
+"251
 [v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 31 ]
-"253
+"255
 } 0
 "156 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\utils.c
 [v _Read_Volt Read_Volt `(f  1 e 3 0 ]
@@ -1430,28 +1441,28 @@ TRUE 1
 [v _printf printf `(i  1 e 2 0 ]
 {
 "1500
-[v printf@idx idx `uc  1 a 1 23 ]
+[v printf@idx idx `uc  1 a 1 29 ]
 "528
-[v printf@val val `ul  1 a 4 36 ]
-[u S2080 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[v printf@val val `ul  1 a 4 42 ]
+[u S2052 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "526
-[v printf@tmpval tmpval `S2080  1 a 4 28 ]
+[v printf@tmpval tmpval `S2052  1 a 4 34 ]
 "516
-[v printf@fval fval `d  1 a 3 42 ]
+[v printf@fval fval `d  1 a 3 48 ]
 "508
-[v printf@flag flag `us  1 a 2 40 ]
+[v printf@flag flag `us  1 a 2 46 ]
 "516
-[v printf@exp exp `i  1 a 2 34 ]
+[v printf@exp exp `i  1 a 2 40 ]
 "501
-[v printf@width width `i  1 a 2 32 ]
+[v printf@width width `i  1 a 2 38 ]
 "504
-[v printf@prec prec `i  1 a 2 26 ]
+[v printf@prec prec `i  1 a 2 32 ]
 "466
-[v printf@ap ap `[1]*.39v  1 a 2 24 ]
+[v printf@ap ap `[1]*.39v  1 a 2 30 ]
 "499
-[v printf@c c `c  1 a 1 45 ]
+[v printf@c c `c  1 a 1 51 ]
 "464
-[v printf@f f `*.25Cuc  1 p 2 0 ]
+[v printf@f f `*.25Cuc  1 p 2 6 ]
 "1541
 } 0
 "425
@@ -1583,8 +1594,8 @@ TRUE 1
 "20 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
 {
-[v ___ftsub@f1 f1 `f  1 p 3 88 ]
-[v ___ftsub@f2 f2 `f  1 p 3 91 ]
+[v ___ftsub@f1 f1 `f  1 p 3 0 ]
+[v ___ftsub@f2 f2 `f  1 p 3 3 ]
 "27
 } 0
 "86 D:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
@@ -1855,17 +1866,22 @@ TRUE 1
 "64
 [v _INT2_isr INT2_isr `(v  1 e 0 0 ]
 {
-"69
+"194
 } 0
-"71
+"57
+[v _force_nec_state0 force_nec_state0 `(v  1 e 0 0 ]
+{
+"61
+} 0
+"196
 [v _INT1_isr INT1_isr `(v  1 e 0 0 ]
 {
-"76
+"201
 } 0
-"78
+"203
 [v _INT0_isr INT0_isr `(v  1 e 0 0 ]
 {
-"80
+"205
 [v INT0_isr@k k `i  1 a 2 0 ]
-"84
+"209
 } 0

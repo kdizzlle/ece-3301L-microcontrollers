@@ -89,19 +89,19 @@ void Toggle_Fan()
 void Turn_Off_Fan()
 {
     printf ("Fan is turned off\r\n");
-//  Set FAN to 1 as well as FAN_EN and FANON_LED to 1
-    FAN = 1;
-    FAN_EN = 1;
-    FANON_LED = 1;
+//  Set FAN to 0 as well as FAN_EN and FANON_LED to 0
+    FAN = 0;
+    FAN_EN = 0;
+    FANON_LED = 0;
 }
 
 void Turn_On_Fan()
 {
     printf ("Fan is turned on\r\n");
-//  Set FAN to 0 as well as FAN_EN and FANON_LED to 0
-    FAN = 0;
-    FAN_EN = 0;
-    FANON_LED = 0;
+//  Set FAN to 1 as well as FAN_EN and FANON_LED to 1
+    FAN = 1;
+    FAN_EN = 1;
+    FANON_LED = 1;
     do_update_pwm(duty_cycle);
 }
 

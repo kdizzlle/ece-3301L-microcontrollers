@@ -5012,8 +5012,133 @@ T1CONbits.TMR1ON = 0;
 void INT2_isr()
 {
 
-INTCON3bits.INT2IF=0;
-INT2_flag = 1;
+
+
+INTCON3bits.INT2IF = 0;
+if (Nec_state != 0)
+{
+Time_Elapsed = (TMR1H << 8) | TMR1L;
+TMR1H = 0;
+TMR1L = 0;
+}
+
+switch(Nec_state)
+{
+case 0 :
+{
+
+
+TMR1H = 0;
+TMR1L = 0;
+PIR1bits.TMR1IF = 0;
+T1CON = 0x90;
+T1CONbits.TMR1ON = 1;
+bit_count = 0;
+Nec_code = 0;
+Nec_state = 1;
+INTCON2bits.INTEDG2 = 1;
+PORTA = Nec_state;
+
+return;
+}
+
+case 1 :
+{
+
+
+if(Time_Elapsed > 8500 && Time_Elapsed < 9500)
+{
+
+Nec_state = 2;
+PORTA = Nec_state;
+
+}
+
+else
+{
+
+force_nec_state0();
+
+}
+INTCON2bits.INTEDG2 = 0;
+return;
+}
+
+case 2 :
+{
+
+if(Time_Elapsed > 4000 && Time_Elapsed < 5000)
+{
+Nec_state = 3;
+PORTA = Nec_state;
+
+}
+else
+{
+
+force_nec_state0();
+
+}
+INTCON2bits.INTEDG2 = 1;
+return;
+}
+
+case 3 :
+{
+
+if(Time_Elapsed > 400 && Time_Elapsed < 700)
+{
+Nec_state = 4;
+PORTA = Nec_state;
+
+}
+else
+{
+
+force_nec_state0();
+
+}
+INTCON2bits.INTEDG2 = 0;
+return;
+}
+
+case 4 :
+{
+
+if(Time_Elapsed > 400 && Time_Elapsed < 1800)
+{
+Nec_code = Nec_code << 1;
+if (Time_Elapsed > 1000)
+Nec_code++;
+bit_count++;
+if(bit_count > 31)
+{
+Nec_Button = Nec_code >> 8;
+Nec_state = 0;
+PORTA = Nec_state;
+
+Nec_ok = 1;
+
+INTCON3bits.INT2IE = 0;
+}
+else
+{
+Nec_state = 3;
+PORTA = Nec_state;
+
+}
+}
+
+else
+{
+
+force_nec_state0();
+
+}
+INTCON2bits.INTEDG2 = 1;
+return;
+}
+}
 }
 
 void INT1_isr()

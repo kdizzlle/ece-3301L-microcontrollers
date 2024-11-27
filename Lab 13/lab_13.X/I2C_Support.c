@@ -19,7 +19,7 @@ extern unsigned char setup_second, setup_minute, setup_hour, setup_day, setup_mo
 void DS1621_Init()
 {
     // put original code       
-    char Device = 0x68;
+    char Device = 0x48;
     I2C_Write_Cmd_Write_Data(Device, ACCESS_CFG, CONT_CONV);
     I2C_Write_Cmd_Only(Device, START_CONV);
 }
@@ -27,7 +27,7 @@ void DS1621_Init()
 int DS1621_Read_Temp()
 {
     // put original code
-    char Device = 0x68;
+    char Device = 0x48;
     char Cmd = READ_TEMP;
     char Data_Ret;    
     I2C_Start();                      // Start I2C protocol

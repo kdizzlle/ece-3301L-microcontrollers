@@ -4384,12 +4384,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main_Screen.c: 199: RPM_Txt[0] = rpm/1000 + '0';
 "199
 [e = *U + &U _RPM_Txt * -> -> -> 0 `i `ui `ux -> -> # *U &U _RPM_Txt `ui `ux -> + -> / _rpm -> 1000 `i `ui -> 48 `ui `uc ]
-[; ;Main_Screen.c: 200: RPM_Txt[1] = rpm/100 + '0';
+[; ;Main_Screen.c: 200: RPM_Txt[1] = (rpm/100)%10 + '0';
 "200
-[e = *U + &U _RPM_Txt * -> -> -> 1 `i `ui `ux -> -> # *U &U _RPM_Txt `ui `ux -> + -> / _rpm -> 100 `i `ui -> 48 `ui `uc ]
-[; ;Main_Screen.c: 201: RPM_Txt[2] = rpm/10 + '0';
+[e = *U + &U _RPM_Txt * -> -> -> 1 `i `ui `ux -> -> # *U &U _RPM_Txt `ui `ux -> + -> % / _rpm -> 100 `i -> 10 `i `ui -> 48 `ui `uc ]
+[; ;Main_Screen.c: 201: RPM_Txt[2] = (rpm/10)%10 + '0';
 "201
-[e = *U + &U _RPM_Txt * -> -> -> 2 `i `ui `ux -> -> # *U &U _RPM_Txt `ui `ux -> + -> / _rpm -> 10 `i `ui -> 48 `ui `uc ]
+[e = *U + &U _RPM_Txt * -> -> -> 2 `i `ui `ux -> -> # *U &U _RPM_Txt `ui `ux -> + -> % / _rpm -> 10 `i -> 10 `i `ui -> 48 `ui `uc ]
 [; ;Main_Screen.c: 202: RPM_Txt[3] = rpm%10 + '0';
 "202
 [e = *U + &U _RPM_Txt * -> -> -> 3 `i `ui `ux -> -> # *U &U _RPM_Txt `ui `ux -> + -> % _rpm -> 10 `i `ui -> 48 `ui `uc ]

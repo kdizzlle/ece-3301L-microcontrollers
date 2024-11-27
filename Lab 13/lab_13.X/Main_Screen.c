@@ -197,8 +197,8 @@ void Update_Screen(void)
         Volt_Txt[3] = (( (int) (volt*100) )%10) + '0';
 
         RPM_Txt[0] = rpm/1000  + '0';
-        RPM_Txt[1] = rpm/100  + '0';  
-        RPM_Txt[2] = rpm/10  + '0'; 
+        RPM_Txt[1] = (rpm/100)%10  + '0';  
+        RPM_Txt[2] = (rpm/10)%10  + '0'; 
         RPM_Txt[3] = rpm%10  + '0';           
 
         drawtext(data_tempc_x, data_tempc_y, tempC_Txt , ST7735_YELLOW , ST7735_BLACK , TS_2);       

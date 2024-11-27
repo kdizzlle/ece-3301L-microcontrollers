@@ -3958,15 +3958,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Fan_Support.c: 91: printf ("Fan is turned off\r\n");
 "91
 [e ( _printf :s 1C ]
-[; ;Fan_Support.c: 93: FAN = 1;
+[; ;Fan_Support.c: 93: FAN = 0;
 "93
-[e = _FAN -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 94: PORTDbits.RD1 = 1;
+[e = _FAN -> -> 0 `i `uc ]
+[; ;Fan_Support.c: 94: PORTDbits.RD1 = 0;
 "94
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;Fan_Support.c: 95: PORTDbits.RD2 = 1;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;Fan_Support.c: 95: PORTDbits.RD2 = 0;
 "95
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 [; ;Fan_Support.c: 96: }
 "96
 [e :UE 405 ]
@@ -3982,15 +3982,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Fan_Support.c: 100: printf ("Fan is turned on\r\n");
 "100
 [e ( _printf :s 2C ]
-[; ;Fan_Support.c: 102: FAN = 0;
+[; ;Fan_Support.c: 102: FAN = 1;
 "102
-[e = _FAN -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 103: PORTDbits.RD1 = 0;
+[e = _FAN -> -> 1 `i `uc ]
+[; ;Fan_Support.c: 103: PORTDbits.RD1 = 1;
 "103
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;Fan_Support.c: 104: PORTDbits.RD2 = 0;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;Fan_Support.c: 104: PORTDbits.RD2 = 1;
 "104
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 [; ;Fan_Support.c: 105: do_update_pwm(duty_cycle);
 "105
 [e ( _do_update_pwm (1 _duty_cycle ]
