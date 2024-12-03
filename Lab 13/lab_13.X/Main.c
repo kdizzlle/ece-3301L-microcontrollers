@@ -119,6 +119,7 @@ void main()
     TMR3L = 0x00;                   
     T3CON = 0x03;
 
+    Deactivate_Buzzer();
 
     tempSecond = 0xff;
     

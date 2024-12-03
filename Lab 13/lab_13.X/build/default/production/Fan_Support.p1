@@ -3704,7 +3704,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
 [; ;Main.h: 1: void Set_D1_RGB(char duty_cycle);
 [; ;Main.h: 2: void Set_D2_RGB(int rpm);
-[; ;Fan_Support.h: 1: int get_duty_cycle(int , int );
+[; ;Fan_Support.h: 1: int get_duty_cycle(unsigned int ,unsigned int );
 [; ;Fan_Support.h: 2: int get_RPM();
 [; ;Fan_Support.h: 3: void Toggle_Fan();
 [; ;Fan_Support.h: 4: void Turn_Off_Fan();
@@ -3784,15 +3784,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;Fan_Support.c: 14: char Timer_Table[4]={0,5,10,20};
 "16
-[v _get_duty_cycle `(i ~T0 @X0 1 ef2`i`i ]
+[v _get_duty_cycle `(i ~T0 @X0 1 ef2`ui`ui ]
 "17
 {
-[; ;Fan_Support.c: 16: int get_duty_cycle(int temp, int set_temp)
+[; ;Fan_Support.c: 16: int get_duty_cycle(unsigned int temp, unsigned int set_temp)
 [; ;Fan_Support.c: 17: {
 [e :U _get_duty_cycle ]
 "16
-[v _temp `i ~T0 @X0 1 r1 ]
-[v _set_temp `i ~T0 @X0 1 r2 ]
+[v _temp `ui ~T0 @X0 1 r1 ]
+[v _set_temp `ui ~T0 @X0 1 r2 ]
 "17
 [f ]
 "18
@@ -3807,7 +3807,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "25
 [v _diff_temp `i ~T0 @X0 1 a ]
 [; ;Fan_Support.c: 25: int diff_temp = (temp-set_temp);
-[e = _diff_temp - _temp _set_temp ]
+[e = _diff_temp -> - _temp _set_temp `i ]
 [; ;Fan_Support.c: 26: dc = diff_temp * 4;
 "26
 [e = _dc * _diff_temp -> 4 `i ]
@@ -3853,7 +3853,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Fan_Support.c: 45: duty_cycle = get_duty_cycle (tempF, fan_set_temp);
 "45
-[e = _duty_cycle -> ( _get_duty_cycle (2 , -> _tempF `i -> _fan_set_temp `i `uc ]
+[e = _duty_cycle -> ( _get_duty_cycle (2 , -> -> _tempF `i `ui -> _fan_set_temp `ui `uc ]
 [; ;Fan_Support.c: 46: do_update_pwm(duty_cycle);
 "46
 [e ( _do_update_pwm (1 _duty_cycle ]

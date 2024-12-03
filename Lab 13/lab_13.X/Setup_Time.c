@@ -119,7 +119,7 @@ void Increase_Time()
                 case 1:
                     // add code here to handle minute increment - also check if new minute is 60. If so, make it 0
                     setup_minute++;
-                    if (setup_minute == 60) setup_hour = 0; 
+                    if (setup_minute == 60) setup_minute = 0; 
                     break;
 
                 case 2:
@@ -143,7 +143,7 @@ void Increase_Time()
                 case 5:
                     // add code here to handle year increment - also check if new year is 100. If so, make it 0
                     setup_year++;
-                    if (setup_year == 100) setup_hour = 0; 
+                    if (setup_year == 100) setup_year = 0; 
                     break;
 
                 default:
@@ -180,7 +180,7 @@ void Decrease_Time()
 
                 case 4:
                     // add code here to check is day is at 1. If not, decrement. If yes, if so, make it 31
-                    if (setup_day == 1) setup_day = 1;
+                    if (setup_day == 1) setup_day = 31;
                     else --setup_day;
                     break;
 

@@ -5106,7 +5106,7 @@ void Init_Interrupt(void);
 void force_nec_state0();
 
 # 1 "Fan_Support.h"
-int get_duty_cycle(int , int );
+int get_duty_cycle(unsigned int ,unsigned int );
 int get_RPM();
 void Toggle_Fan();
 void Turn_Off_Fan();
@@ -5317,6 +5317,7 @@ Initialize_Screen();
 TMR3L = 0x00;
 T3CON = 0x03;
 
+Deactivate_Buzzer();
 
 tempSecond = 0xff;
 
@@ -5347,7 +5348,7 @@ Monitor_Fan();
 Update_Screen();
 }
 
-# 158
+# 159
 if (check_for_button_input()==1 && SYSTEM_ON == 1)
 {
 
@@ -5406,7 +5407,7 @@ Do_Beep_Bad();
 }
 }
 
-# 222
+# 223
 if (INT0_flag == 1 || light_flag == 1)
 {
 INT0_flag = 0;

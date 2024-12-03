@@ -13,7 +13,7 @@ extern char FAN_TIMER_MODE, FAN_TIMER_TIME;
 
 char Timer_Table[4]={Timer0,Timer1,Timer2,Timer3};
 
-int get_duty_cycle(int temp, int set_temp)
+int get_duty_cycle(unsigned int temp, unsigned int set_temp)
 {	
     int dc;
 // add code here to check :

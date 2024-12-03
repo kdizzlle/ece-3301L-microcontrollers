@@ -5127,7 +5127,7 @@ void Init_ADC();
 void Init_UART(void);
 
 # 1 "Fan_Support.h"
-int get_duty_cycle(int , int );
+int get_duty_cycle(unsigned int ,unsigned int );
 int get_RPM();
 void Toggle_Fan();
 void Turn_Off_Fan();
@@ -5250,7 +5250,7 @@ break;
 case 1:
 
 setup_minute++;
-if (setup_minute == 60) setup_hour = 0;
+if (setup_minute == 60) setup_minute = 0;
 break;
 
 case 2:
@@ -5274,7 +5274,7 @@ break;
 case 5:
 
 setup_year++;
-if (setup_year == 100) setup_hour = 0;
+if (setup_year == 100) setup_year = 0;
 break;
 
 default:
@@ -5311,7 +5311,7 @@ break;
 
 case 4:
 
-if (setup_day == 1) setup_day = 1;
+if (setup_day == 1) setup_day = 31;
 else --setup_day;
 break;
 

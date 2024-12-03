@@ -1,4 +1,4 @@
-int get_duty_cycle(int , int );
+int get_duty_cycle(unsigned int ,unsigned int );
 int get_RPM();
 void Toggle_Fan();
 void Turn_Off_Fan();

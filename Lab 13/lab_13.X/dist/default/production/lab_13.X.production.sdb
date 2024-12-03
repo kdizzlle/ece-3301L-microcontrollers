@@ -148,9 +148,9 @@ TRUE 1
 [v _Do_Init Do_Init `(v  1 e 0 0 ]
 "113
 [v _main main `(v  1 e 0 0 ]
-"248
+"249
 [v _Set_D1_RGB Set_D1_RGB `(v  1 e 0 0 ]
-"257
+"258
 [v _Set_D2_RGB Set_D2_RGB `(v  1 e 0 0 ]
 "41 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main_Screen.c
 [v _Initialize_Screen Initialize_Screen `(v  1 e 0 0 ]
@@ -388,7 +388,7 @@ TRUE 1
 [v _TRISBbits TRISBbits `VES252  1 e 1 @3987 ]
 "2075
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S2251 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S2252 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -398,8 +398,8 @@ TRUE 1
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "2107
-[u S2269 . 1 `S2251 1 . 1 0 `S657 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES2269  1 e 1 @3988 ]
+[u S2270 . 1 `S2252 1 . 1 0 `S657 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES2270  1 e 1 @3988 ]
 "2296
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2517
@@ -442,7 +442,7 @@ TRUE 1
 [v _PIR1bits PIR1bits `VES476  1 e 1 @3998 ]
 "3265
 [v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
-[s S2155 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S2156 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -452,25 +452,25 @@ TRUE 1
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3306
-[s S2164 . 1 `uc 1 . 1 0 :3:0 
+[s S2165 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S2167 . 1 `uc 1 . 1 0 :5:0 
+[s S2168 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S2170 . 1 `uc 1 . 1 0 :6:0 
+[s S2171 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S2173 . 1 `uc 1 . 1 0 :6:0 
+[s S2174 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S2176 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S2177 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S2178 . 1 `S2155 1 . 1 0 `S2164 1 . 1 0 `S2167 1 . 1 0 `S2170 1 . 1 0 `S2173 1 . 1 0 `S2176 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES2178  1 e 1 @4011 ]
+[u S2179 . 1 `S2156 1 . 1 0 `S2165 1 . 1 0 `S2168 1 . 1 0 `S2171 1 . 1 0 `S2174 1 . 1 0 `S2177 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES2179  1 e 1 @4011 ]
 "3474
 [v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
-[s S2068 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S2069 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -480,36 +480,36 @@ TRUE 1
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3534
-[s S2077 . 1 `uc 1 . 1 0 :2:0 
+[s S2078 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 BRGH1 1 0 :1:2 
 ]
-[s S2080 . 1 `uc 1 . 1 0 :7:0 
+[s S2081 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S2083 . 1 `uc 1 . 1 0 :3:0 
+[s S2084 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SENDB1 1 0 :1:3 
 ]
-[s S2086 . 1 `uc 1 . 1 0 :4:0 
+[s S2087 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SYNC1 1 0 :1:4 
 ]
-[s S2089 . 1 `uc 1 . 1 0 :1:0 
+[s S2090 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 ]
-[s S2092 . 1 `uc 1 . 1 0 :6:0 
+[s S2093 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX91 1 0 :1:6 
 ]
-[s S2095 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S2096 . 1 `uc 1 TX9D1 1 0 :1:0 
 ]
-[s S2097 . 1 `uc 1 . 1 0 :5:0 
+[s S2098 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 TXEN1 1 0 :1:5 
 ]
-[s S2100 . 1 `uc 1 . 1 0 :6:0 
+[s S2101 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S2103 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S2104 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S2105 . 1 `S2068 1 . 1 0 `S2077 1 . 1 0 `S2080 1 . 1 0 `S2083 1 . 1 0 `S2086 1 . 1 0 `S2089 1 . 1 0 `S2092 1 . 1 0 `S2095 1 . 1 0 `S2097 1 . 1 0 `S2100 1 . 1 0 `S2103 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES2105  1 e 1 @4012 ]
+[u S2106 . 1 `S2069 1 . 1 0 `S2078 1 . 1 0 `S2081 1 . 1 0 `S2084 1 . 1 0 `S2087 1 . 1 0 `S2090 1 . 1 0 `S2093 1 . 1 0 `S2096 1 . 1 0 `S2098 1 . 1 0 `S2101 1 . 1 0 `S2104 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES2106  1 e 1 @4012 ]
 "3771
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "3793
@@ -917,7 +917,7 @@ TRUE 1
 "113 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"245
+"246
 } 0
 "100 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main_Screen.c
 [v _Update_Screen Update_Screen `(v  1 e 0 0 ]
@@ -1014,27 +1014,27 @@ TRUE 1
 [v bcd_2_dec@bcd bcd `uc  1 a 1 20 ]
 "57
 } 0
-"257 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
+"258 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Main.c
 [v _Set_D2_RGB Set_D2_RGB `(v  1 e 0 0 ]
 {
-"260
+"261
 [v Set_D2_RGB@range range `i  1 a 2 32 ]
-"258
+"259
 [v Set_D2_RGB@rpm rpm `i  1 p 2 30 ]
-"266
+"267
 } 0
-"248
+"249
 [v _Set_D1_RGB Set_D1_RGB `(v  1 e 0 0 ]
 {
-"249
+"250
 [v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 wreg ]
-"251
+"252
 [v Set_D1_RGB@range range `i  1 a 2 32 ]
-"249
+"250
 [v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 wreg ]
-"251
+"252
 [v Set_D1_RGB@duty_cycle duty_cycle `uc  1 a 1 31 ]
-"255
+"256
 } 0
 "156 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\utils.c
 [v _Read_Volt Read_Volt `(f  1 e 3 0 ]
@@ -1079,8 +1079,8 @@ TRUE 1
 "18
 [v get_duty_cycle@dc dc `i  1 a 2 24 ]
 "16
-[v get_duty_cycle@temp temp `i  1 p 2 16 ]
-[v get_duty_cycle@set_temp set_temp `i  1 p 2 18 ]
+[v get_duty_cycle@temp temp `ui  1 p 2 16 ]
+[v get_duty_cycle@set_temp set_temp `ui  1 p 2 18 ]
 "34
 } 0
 "229 C:\Users\kelly\OneDrive - Cal Poly Pomona\fall 2024\ece 3301L intro to microcontrollers lab\Lab 13\lab_13.X\Setup_Time.c
@@ -1444,9 +1444,9 @@ TRUE 1
 [v printf@idx idx `uc  1 a 1 29 ]
 "528
 [v printf@val val `ul  1 a 4 42 ]
-[u S2052 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S2053 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "526
-[v printf@tmpval tmpval `S2052  1 a 4 34 ]
+[v printf@tmpval tmpval `S2053  1 a 4 34 ]
 "516
 [v printf@fval fval `d  1 a 3 48 ]
 "508

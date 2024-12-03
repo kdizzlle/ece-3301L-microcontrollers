@@ -3946,7 +3946,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;utils.h: 15: unsigned int get_full_ADC();
 [; ;utils.h: 16: void Init_ADC();
 [; ;utils.h: 17: void Init_UART(void);
-[; ;Fan_Support.h: 1: int get_duty_cycle(int , int );
+[; ;Fan_Support.h: 1: int get_duty_cycle(unsigned int ,unsigned int );
 [; ;Fan_Support.h: 2: int get_RPM();
 [; ;Fan_Support.h: 3: void Toggle_Fan();
 [; ;Fan_Support.h: 4: void Turn_Off_Fan();
@@ -4213,10 +4213,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Setup_Time.c: 121: setup_minute++;
 "121
 [e ++ _setup_minute -> -> 1 `i `uc ]
-[; ;Setup_Time.c: 122: if (setup_minute == 60) setup_hour = 0;
+[; ;Setup_Time.c: 122: if (setup_minute == 60) setup_minute = 0;
 "122
 [e $ ! == -> _setup_minute `i -> 60 `i 417  ]
-[e = _setup_hour -> -> 0 `i `uc ]
+[e = _setup_minute -> -> 0 `i `uc ]
 [e :U 417 ]
 [; ;Setup_Time.c: 123: break;
 "123
@@ -4269,10 +4269,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Setup_Time.c: 145: setup_year++;
 "145
 [e ++ _setup_year -> -> 1 `i `uc ]
-[; ;Setup_Time.c: 146: if (setup_year == 100) setup_hour = 0;
+[; ;Setup_Time.c: 146: if (setup_year == 100) setup_year = 0;
 "146
 [e $ ! == -> _setup_year `i -> 100 `i 425  ]
-[e = _setup_hour -> -> 0 `i `uc ]
+[e = _setup_year -> -> 0 `i `uc ]
 [e :U 425 ]
 [; ;Setup_Time.c: 147: break;
 "147
@@ -4386,10 +4386,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Setup_Time.c: 181: case 4:
 "181
 [e :U 442 ]
-[; ;Setup_Time.c: 183: if (setup_day == 1) setup_day = 1;
+[; ;Setup_Time.c: 183: if (setup_day == 1) setup_day = 31;
 "183
 [e $ ! == -> _setup_day `i -> 1 `i 443  ]
-[e = _setup_day -> -> 1 `i `uc ]
+[e = _setup_day -> -> 31 `i `uc ]
 [e $U 444  ]
 "184
 [e :U 443 ]

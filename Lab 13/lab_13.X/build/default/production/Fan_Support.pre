@@ -4881,7 +4881,7 @@ void Set_D1_RGB(char duty_cycle);
 void Set_D2_RGB(int rpm);
 
 # 1 "Fan_Support.h"
-int get_duty_cycle(int , int );
+int get_duty_cycle(unsigned int ,unsigned int );
 int get_RPM();
 void Toggle_Fan();
 void Turn_Off_Fan();
@@ -4989,7 +4989,7 @@ extern char FAN_TIMER_MODE, FAN_TIMER_TIME;
 
 char Timer_Table[4]={0,5,10,20};
 
-int get_duty_cycle(int temp, int set_temp)
+int get_duty_cycle(unsigned int temp, unsigned int set_temp)
 {
 int dc;
 
